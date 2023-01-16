@@ -1,0 +1,10 @@
+.header{
+    background-color: #5CE1E6;
+    height:100px;
+}
+
+.header .img-logo img{
+    width:120px;
+    height:100px;
+
+}
