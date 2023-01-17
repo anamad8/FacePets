@@ -1,4 +1,15 @@
 *{
     margin: 0;
     padding: 0;
+    
 }
+
+.active{
+    background-color: #000;
+    height: 100%;
+}
+
+.active p{
+    color: #fff;
+}
+

@@ -14,8 +14,6 @@ function App() {
   console.log(user)
   return (
     <>
-    
-      
       <Routes>
         <Route element={<ProtectedRoute user={user}/>}>
           <Route path="/home" element={<Home/>}/>

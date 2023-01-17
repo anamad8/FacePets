@@ -20,7 +20,7 @@ export const DataProveder = ({children}) => {
     
 
     return(
-        <DataContext.Provider value={{user,login,logout}}>
+        <DataContext.Provider value={{user, login, logout}}>
             {children}
         </DataContext.Provider>
     )

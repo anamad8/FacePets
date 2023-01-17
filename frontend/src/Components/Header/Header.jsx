@@ -1,13 +1,15 @@
 import React from 'react';
 import './Header.css';
-import Logo from '../../Img/logo-facepets.png'
+import DarkMode from '../DarkMode/DarkMode';
+// import Logo from '../../Img/logo-facepets.png';
+// import logoDark from '../../Img/logo-fecepets-color.png';
 
 function Header() {
     return (
         <div className='header'>
             <div className='img-logo'>
-                <img src={Logo} alt="" />
             </div>
+            <DarkMode/>
         </div>
     )
 }
