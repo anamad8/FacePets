@@ -26,6 +26,9 @@ export function UserProvider(props) {
           breed: data.data[0].breed,
           description: data.data[0].description,
           image: data.data[0].image,
+          gender:data.data[0].gender,
+          petAge: data.data[0].petAge,
+          imageBanner: data.data[0].imageBanner
         });
       })
       .catch((err) => console.log(err));

@@ -41,16 +41,33 @@ const getByidUser = async (req, res) => {
     console.log(e);
   }
 };
+const updateBanner = async(req,res)=>{
+
+  let urlImage1;
+      const url = req.protocol + "://" + req.get("host");
+      urlImage1 = url + "/uploads/" + req.file.filename;
+
+  User.update({
+    imageBanner: urlImage1
+  },{
+      where: {
+        id: req.params.id,
+      },
+  }
+  ).then((result) => {
+    res.json(result);
+  });
+}
 const updateUser = async (req, res) => {
   try {
-    let rol=0
+    
     let urlImage;
     if (req.file == undefined) {
       urlImage = null;
     } else {
       const url = req.protocol + "://" + req.get("host");
       urlImage = url + "/uploads/" + req.file.filename;
-      rol= 1
+
     }
     if (urlImage == null) {
       User.update(req.body,
@@ -71,7 +88,8 @@ const updateUser = async (req, res) => {
             image: urlImage,
             breed: req.body.breed,
             description: req.body.description,
-            role: rol,
+            gender: req.body.gender,
+            petAge: req.body.petAge,
         },
         {
           where: {
@@ -135,6 +153,8 @@ const createUser = async (req, res) => {
       breed: req.body.breed,
       description: req.body.description,
       password: bcryptjs.hashSync(req.body.password),
+      gender: req.body.gender,
+      petAge: req.body.petAge,
       role: rol,
     };
     const acessToken = generateAcessToken(modelData);
@@ -176,5 +196,6 @@ module.exports = {
   login,
   updateUser,
   getByidUser,
- getUserPost
+ getUserPost,
+ updateBanner
 };

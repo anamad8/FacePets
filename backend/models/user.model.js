@@ -13,6 +13,12 @@ module.exports = (sequelize, DataTypes) => {
     petName: {
       type: DataTypes.STRING,
     },
+    petAge:{
+      type: DataTypes.INTEGER
+    },
+    gender:{
+      type:DataTypes.INTEGER
+    },
     email: {
       type: DataTypes.STRING,
       unique: true,
@@ -35,6 +41,11 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.TEXT,
       defaultValue: null,
     },
+    imageBanner: {
+      type: DataTypes.TEXT,
+      defaultValue: null,
+    }
+    ,
     role: {
       type: DataTypes.INTEGER,
     },

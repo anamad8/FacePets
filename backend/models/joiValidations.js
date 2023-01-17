@@ -25,6 +25,14 @@ const validateUser = (req,res,next) =>{
             'string.min': "La contraseña debe ser mayor a 3 caracteres",
             'string.max': "La contraseña debe ser menor a 20 caracteres",
             'any.required': "Ingresa una contraseña"
+        }),
+        petAge: Joi.number().required()
+        .messages({
+            'any.required': "Ingresa la edad de su Mascota"
+        }),
+        gender: Joi.number().required()
+        .messages({
+            'any.required': "Ingresa el genero de su mascota"
         })
     });
     validateRequest(req, res, next, schema)
