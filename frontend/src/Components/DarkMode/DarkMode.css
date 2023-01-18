@@ -2,10 +2,6 @@
     padding: 0px 15px;
 }
 
-.toggle--checkbox {
-    display: none;
-}
-
 :root {
     /** sunny side **/
     --blue-background: #c2e9f6;
@@ -23,25 +19,26 @@
     --white: #fff;
 }
 
-.toggle--label {
+.claro{
     width: 50px;
-    height: 25px;
+    height: 30px;
     background: var(--blue-color);
     border-radius: 100px;
     border: 3px solid var(--blue-border);
     display: flex;
     position: relative;
     transition: all 350ms ease-in;
+    
 }
 
-.toggle--label:before {
+.claro:before {
     animation-name: reverse;
     animation-duration: 350ms;
     animation-fill-mode: forwards;
     transition: all 350ms ease-in;
     content: '';
     width: 22px;
-    height: 22px;
+    height: 20px;
     border: 2px solid var(--yellow-border);
     left: 2px;
     position: absolute;
@@ -49,21 +46,51 @@
     background: var(--yellow-background);
 }
 
-@keyframes reverse {
-    0% {
-        left: 35px;
-        width: 20px;
-    }
-    60% {
-        left: 20px;
-        width: 15px;
-    }
-    100% {
-        left: 3px;
-    }
+.claro::after{
+    content: '';
+    position: absolute;
+    top: 7px;
+    width: 7px;
+    height: 3px;
+    border-radius: 17px;
+    background: var(--white);
+    left: 31px;
+    transition: all 150ms ease-in;
 }
 
-.background {
+
+.oscuro{
+    width: 50px;
+    height: 30px;
+    background: var(--indigo-background);
+    border-radius: 100px;
+    border: 3px solid var(--indigo-border);
+    display: flex;
+    position: relative;
+    transition: all 350ms ease-in;
+    
+
+}
+
+.oscuro:before {
+    animation-name: reverse;
+    animation-duration: 350ms;
+    animation-fill-mode: forwards;
+    transition: all 350ms ease-in;
+    content: '';
+    width: 22px;
+    height: 20px;
+    border: 2px solid var(--gray-border);
+    left: 20px;
+    position: absolute;
+    border-radius: 82px;
+    background: var(--gray-dots);
+
+}
+
+/* ********************** */
+
+.background-claro {
     position: absolute;
     left: 0;
     top: 0;
@@ -74,111 +101,42 @@
     transition: all 250ms ease-in;
 }
 
-.toggle--label-background {
+.toggle--label-background-claro{
     width: 10px;
     height: 3px;
     border-radius: 5px;
     position: relative;
     background: var(--white);
-    left: 35px;
-    top: 9px;
+    left: 29px;
+    top: 14px;
     transition: all 150ms ease-in;
     -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
 }
 
-.toggle--label-background:before {
-    content: '';
-    position: absolute;
-    top: -6px;
-    width: 10px;
+.toggle--label-background-oscuro{
+    width: 3px;
     height: 3px;
     border-radius: 5px;
+    position: relative;
     background: var(--white);
-    left: -8px;
-    transition: all 150ms ease-in;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
-}
-.toggle--label-background:after {
-    content: '';
-    position: absolute;
-    top: 5px;
-    width: 10px;
-    height: 5px;
-    border-radius: 5px;
-    background: var(--white);
-    left: -6px;
-    transition: all 150ms ease-in;
-}
-
-.toggle--checkbox:checked ~ .background {
-    background: var(--indigo-background);
-}
-
-.toggle--checkbox:checked + .toggle--label {
-    background: var(--indigo-color);
-    border-color: var(--indigo-border);
-}
-
-.toggle--checkbox:checked + .toggle--label:before {
-    background: var(--white);
-    border-color: var(--gray-border);
-    animation-name: switch;
-    animation-duration: 350ms;
-    animation-fill-mode: forwards;
-}
-
-@keyframes switch {
-    0% {
-    left: 3px;
-    }
-    60% {
-    left: 15px;
-    width: 20px;
-    }
-    100% {
-    left: 25px;
-    width: 20px;
-    }
-}
-
-.toggle--label:after {
-    transition-delay: 0ms;
-    transition: all 250ms ease-in;
-    position: absolute;
-    content: '';
-    box-shadow: var(--gray-dots) -13px 0 0 2px, var(--gray-dots) -24px 14px 0 -2px;
-    left: 48px;
+    left: 11px;
     top: 6px;
+    transition: all 150ms ease-in;
+    -webkit-border-radius: 5px;
+}
+
+.oscuro::after {
+    content: '';
+    position: absolute;
+    top: 14px;
     width: 3px;
     height: 3px;
-    background: transparent;
-    border-radius: 50%;
-    opacity: 0;
-}
-
-.toggle--checkbox:checked + .toggle--label:after {
-    transition-delay: 350ms;
-    opacity: 1;
-}
-
-.toggle--checkbox:checked + .toggle--label .toggle--label-background {
-    left: 20px;
-    width: 3px;
-}
-.toggle--checkbox:checked + .toggle--label .toggle--label-background:before {
-    width: 5px;
-    height: 5px;
-    top: -6px;
-}
-.toggle--checkbox:checked + .toggle--label .toggle--label-background:after {
-    width: 5px;
-    height: 5px;
-    left: -14px;
-    top: 3px;
+    border-radius: 17px;
+    background: var(--white);
+    left: 7px;
+    transition: all 150ms ease-in;
+    -webkit-border-radius: 17px;
+    -moz-border-radius: 17px;
+    -ms-border-radius: 17px;
+    -o-border-radius: 17px;
 }
