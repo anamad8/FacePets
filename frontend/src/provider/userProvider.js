@@ -11,15 +11,16 @@ export function useUserToggleContext() {
 }
 
 export function UserProvider(props) {
-  const [user, setUser] = useState(1);
+  const [user, setUser] = useState({id:1});
   const [datas, setData] = useState({});
   useEffect(() => {
-    fetch("http://localhost:3030/user/" + user)
+    fetch("http://localhost:3030/user/" + user.id)
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
         console.log(data.data[0].name);
         setData({
+          id: data.data[0].id,
           name: data.data[0].name,
           petName: data.data[0].petName,
           email: data.data[0].email,
@@ -41,7 +42,7 @@ export function UserProvider(props) {
   };
 
   return (
-    <userContext.Provider value={datas}>
+    <userContext.Provider value={{datas}}>
       <userToggleContext.Provider
         value={{
           login,

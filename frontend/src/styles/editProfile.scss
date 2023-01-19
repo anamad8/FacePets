@@ -1,0 +1,69 @@
+#modalContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+   
+    .modal{
+        
+        padding: 10px;
+        margin: 10px;
+        border-radius: 10px;
+       background-color: #5CE1E6;
+       width: 500px;
+       .button{
+        text-align: center;
+       button{
+        border: none;
+        padding: 10px;
+        border-radius: 10px;
+        font-size: 15px;
+        background-color: greenyellow;
+        color: white;
+        &:hover{
+            cursor: pointer;
+        }
+    }}
+    .editImagen{
+        padding: 20px;
+        margin: 15px;
+        box-shadow: 1px 1px 10px rgb(196, 196, 196);
+        text-align: center;
+        label{
+            display: block;
+        }
+        img{
+            width: 250px;
+            border-radius: 50%;
+            height: 15rem;
+            box-shadow: 1px 1px 20px gray;
+            margin: 5px;
+        }
+    }
+       #textarea{
+        text-align: center;
+        label{
+            display: block;
+        }
+       }
+       .input{
+        
+        box-shadow: 1px 1px 10px rgb(228, 226, 226);
+        border-radius: 10px;
+        margin: 15px;
+        padding: 10px;
+        label{
+            margin-right: 5px;
+           }
+        input{
+            border: none;
+        }
+        textarea{
+            
+            resize: none;
+        }
+       
+       }
+    }
+}
+
+

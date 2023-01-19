@@ -1,63 +1,11 @@
+@import "./styles/profile.scss";
+@import "./styles/sideBar.scss";
+@import "./styles/editProfile.scss";
 
+$width-collapsed: 50px;
 body{
     margin: 0;
     min-width: 700px;
     background-color: rgb(247, 243, 243);
+    margin-left: $width-collapsed;
 }
-.flexContainer{
-    display: flex;
-    justify-content: center;
-
-.containerProfile{
-    border-radius: 10px;
-    width: 60%;
-    background-color: #5CE1E6;
-    height: max-content;
-    padding: 20px;
-    box-shadow: 1px 1px 5px rgb(138, 137, 137);
-    font-family: 'Times New Roman', Times, serif;
-    color: white;
-    
-    
-    .profileImg{
-
-        border-radius: 10px;
-        padding: 5px;
-        border-bottom: solid;
-        height: 15rem;
-        text-align: center;
-        background-image: url(https://cnnespanol.cnn.com/wp-content/uploads/2022/07/220713165438-rba-web-nasa-full-169.jpg?quality=100&strip=info&w=384&h=216&crop=1);
-        background-size: cover;
-        .icon{
-            float: right;
-            font-size: 20px;
-            &:hover{
-                transition: all  0.3s;
-            font-size: 25px;
-            cursor: pointer;
-            }
-        }
-        img{
-            width: 250px;
-            border-radius: 50%;
-            height: 15rem;
-            box-shadow: 1px 1px 20px gray;
-        }
-    }
-    .profileData{
-        border-bottom: solid;
-        font-size: 1rem;
-        span{
-            margin-left: 5px;
-        }
-        .profileAge{
-            float: right;
-            font-size: 20px;
-            padding: 10px;
-        }
-    }
-    .profileDesc{
-        font-size: 1.2rem;
-        border-bottom: solid;
-    }
-}}
