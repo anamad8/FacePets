@@ -39,7 +39,17 @@ export default function RightBar() {
           <div className="user">
             <div className="userInfo">
               <img className='img' src="https://1.bp.blogspot.com/-ijGzIqrmkMs/YO44thf30UI/AAAAAAAB2ZY/7Uz9RBJB2x4ILV44e66ohhZ-xB-dzHXEACNcBGAsYHQ/s680/DebPlace%2BTech%2BAcademy.jpg" alt="" />
-              <span className="name">Adrian Canobio</span>
+              <span className="name">Adrian Canobbio </span>
+            </div>
+            <div className="buttons">
+              <button className='button'>Seguir</button>
+              <button className='button2'>Eliminar</button>
+            </div>
+          </div>
+          <div className="user">
+            <div className="userInfo">
+              <img className='img' src="https://1.bp.blogspot.com/-ijGzIqrmkMs/YO44thf30UI/AAAAAAAB2ZY/7Uz9RBJB2x4ILV44e66ohhZ-xB-dzHXEACNcBGAsYHQ/s680/DebPlace%2BTech%2BAcademy.jpg" alt="" />
+              <span className="name">Lucas Lilloia Scott </span>
             </div>
             <div className="buttons">
               <button className='button'>Seguir</button>
