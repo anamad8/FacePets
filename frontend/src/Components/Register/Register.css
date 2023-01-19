@@ -11,7 +11,8 @@
     position: absolute;
     margin-left: 60px;
     width: 400px;
-    height: 310px;
+    height: max-content;
+    padding-bottom: 10px;
     top: 150px;
 
     background: rgba(92, 225, 230, 0.22);
