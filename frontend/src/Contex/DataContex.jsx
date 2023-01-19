@@ -12,9 +12,10 @@ export const DataProveder = ({children}) => {
         id:null
     })
     const [darkMode, setDarkMode] = useState(false)
-    const [datas, setData] = useState({});
+    const [datas, setData] = useState(null);
 
     useEffect(() => {
+        if(user){
         fetch("http://localhost:3030/user/" + user.id)
           .then((res) => res.json())
           .then((data) => {
@@ -33,8 +34,9 @@ export const DataProveder = ({children}) => {
               imageBanner: data.data[0].imageBanner
             });
           })
-          .catch((err) => console.log(err));
+          .catch((err) => console.log(err));}
       }, [user]);
+
     const handlePosition = () => {
         setDarkMode(!darkMode)
         let modo = document.getElementById("active");
