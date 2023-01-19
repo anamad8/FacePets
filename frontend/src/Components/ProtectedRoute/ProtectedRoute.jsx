@@ -1,8 +1,8 @@
 import { Navigate, Outlet } from "react-router-dom";
 
-export const ProtectedRoute = ({ user, resirectTo="/login"}) => {
+export const ProtectedRoute = ({ user, redirectTo="/login"}) => {
     if (!user) {
-        return <Navigate to={resirectTo}/>;
+        return <Navigate to={redirectTo}/>;
     }
 
     return <Outlet/>;

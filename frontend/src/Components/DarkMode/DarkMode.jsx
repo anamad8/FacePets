@@ -1,6 +1,6 @@
-import React, { useState, useContext } from 'react';
+import React, { useContext } from 'react';
 import './DarkMode.css';
-import { DataContext } from '../../Contex/DataContex';
+import { DataContext } from '../../Context/DataContext';
 
 function DarkMode() {
 

@@ -1,10 +1,10 @@
 import React, {useContext} from "react";
 import './CSS/style.css'
 import { Routes, Route, Link} from "react-router-dom";
-import Home from "./pages/Home/Home";
-import Login from "./pages/Login/Login"
-import Register from "./pages/Register/Register";
-import { DataContext } from "./Contex/DataContex";
+import Home from "./Components/Home/Home";
+import Login from "./Components/Login/Login"
+import Register from "./Components/Register/Register";
+import { DataContext } from "./Context/DataContext";
 import { ProtectedRoute }from "./Components/ProtectedRoute/ProtectedRoute"
 
 function App() {
