@@ -12,3 +12,14 @@
     color: #fff;
 }
 
+.moving-img{
+
+        grid-column: 2 / 2;
+        grid-row: 1;
+        justify-content: center;
+    
+}
+.moving-img img{
+    animation: updown 3s linear infinite;
+    -webkit-animation: updown 3s linear infinite;
+}

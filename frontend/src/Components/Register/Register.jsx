@@ -1,7 +1,7 @@
 import React,{useState} from 'react';
 import './Register.css';
+import MovingBanner from '../MovingBanner/MovingBanner';
 import { Link } from 'react-router-dom';
-import img from '../Img/img-login-register.png';
 import { useNavigate } from "react-router-dom";
 
 function Register() {
@@ -178,10 +178,7 @@ function Register() {
 
                     </div>
 
-                    <div className='register-img'>
-                        <img src={img} alt="" />
-                        <p>Crea una página para compartir las historia de tu mascota.</p>
-                    </div>
+                <MovingBanner />
 
                 </div>
         </>

@@ -1,9 +1,9 @@
 import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
 import './Login.css';
-import img from '../Img/img-login-register.png';
 import {useNavigate} from "react-router-dom";
 import { useDataContext } from '../../Context/DataContext';
+import MovingBanner from '../MovingBanner/MovingBanner';
 
 
 function Login() {
@@ -97,10 +97,7 @@ function Login() {
 
                     </div>
 
-                    <div className='login-img'>
-                        <img src={img} alt="" />
-                        <p>Crea una página para compartir las historia de tu mascota.</p>
-                    </div>
+                    <MovingBanner />
 
                 </div>
         </>
