@@ -1,6 +1,5 @@
 import React,{useState} from 'react';
 import './Register.css';
-import Header from '../../Components/Header/Header';
 import { Link } from 'react-router-dom';
 import img from '../Img/img-login-register.png';
 import { useNavigate } from "react-router-dom";

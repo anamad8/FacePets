@@ -44,11 +44,15 @@ const getByidUser = async (req, res) => {
 const updateBanner = async(req,res)=>{
 
   let urlImage1;
+  if (req.file == undefined) {
+    urlImage = null;
+  } else {
       const url = req.protocol + "://" + req.get("host");
       urlImage1 = url + "/uploads/" + req.file.filename;
-
+  }
   User.update({
     imageBanner: urlImage1
+  
   },{
       where: {
         id: req.params.id,
