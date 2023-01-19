@@ -1,11 +1,13 @@
 import React, {useContext} from "react";
 import './CSS/style.css'
-import { Routes, Route, Link} from "react-router-dom";
+import {BrowserRouter as Router, Routes, Route, Link} from "react-router-dom";
 import Home from "./pages/Home/Home";
 import Login from "./pages/Login/Login"
 import Register from "./pages/Register/Register";
 import { DataContext } from "./Contex/DataContex";
 import { ProtectedRoute }from "./Components/ProtectedRoute/ProtectedRoute"
+import Header from "./Components/Header/Header";
+import SideBar from "./Components/sideBar/sidebar";
 
 function App() {
 
@@ -14,13 +16,20 @@ function App() {
   console.log(user)
   return (
     <>
+
+
+
+<Header/>
+<SideBar/>
       <Routes>
+       
         <Route element={<ProtectedRoute user={user}/>}>
           <Route path="/home" element={<Home/>}/>
         </Route>
         <Route exact path="/login"  element={<Login/>}/>
         <Route exact path="/register" element={<Register/>} />
       </Routes>
+      
       <Navigation/>
     {
       user ? (
@@ -29,8 +38,11 @@ function App() {
         <button onClick={login}>Login</button> 
       )
     }
+
     </>
+    
   );
+  
 }
 
 function Navigation() {
@@ -44,7 +56,7 @@ function Navigation() {
           <Link to="/login">Login</Link>
         </li>
         <li>
-          {/* <Link to="/register">Register</Link> */}
+           <Link to="/register">Register</Link> 
         </li>
       </ul>
     </nav>

@@ -57,7 +57,6 @@ function Login() {
     return (
 
         <>
-            <Header/>
 
                 <div className='login'>
                     <div className='login-from'>
