@@ -1,24 +1,61 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useContext} from "react";
+import './CSS/style.css'
+import { Routes, Route, Link} from "react-router-dom";
+import Home from "./pages/Home/Home";
+import Login from "./pages/Login/Login"
+import Register from "./pages/Register/Register";
+import { DataContext } from "./Contex/DataContex";
+import { ProtectedRoute }from "./Components/ProtectedRoute/ProtectedRoute"
+import Footer from "./pages/Footer/Footer";
+
 
 function App() {
+
+  const { user, login, logout } = useContext(DataContext)
+
+  console.log(user)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      
+      <Routes>
+        <Route element={<ProtectedRoute user={user}/>}>
+          <Route path="/home" element={<Home/>}/>
+        </Route>
+        <Route exact path="/login"  element={<Login/>}/>
+        <Route exact path="/register" element={<Register/>} />
+      </Routes>
+      <Navigation/>
+    
+    <Footer></Footer>
+    {
+      user ? (
+        <button onClick={logout}>Logout</button> 
+      ) : (
+        <button onClick={login}>Login</button> 
+      )
+    }
+
+
+    </>
+
+  );
+}
+
+function Navigation() {
+  return (
+    <nav>
+      <ul>
+        <li>
+          <Link to="/home">Home</Link>
+        </li>
+        <li>
+          <Link to="/login">Login</Link>
+        </li>
+        <li>
+          {/* <Link to="/register">Register</Link> */}
+        </li>
+      </ul>
+    </nav>
   );
 }
 
