@@ -72,7 +72,7 @@ function Register() {
             errors.email = '*Se requiere el email';
         }
 
-        if(datos.password.length < 8){
+        if(datos.password.length < 5){
             errors.password = '*Se requiere la password que sea mayor a 8 caracteres';
         }
         
@@ -112,7 +112,6 @@ function Register() {
                       history('/login');
                     })
                  }
-                
                 })
               .catch((err) => console.log(err))
             

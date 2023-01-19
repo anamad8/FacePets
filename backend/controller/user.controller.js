@@ -5,7 +5,7 @@ const User = db.user
 const jwt = require("jsonwebtoken");
 const bcryptjs = require("bcryptjs");
 require("dotenv").config();
-const generateAcessToken = (user) => {
+const generateAccessToken = (user) => {
   return jwt.sign(user, process.env.SECRET, { expiresIn: "5m" });
 };
 
@@ -127,13 +127,13 @@ const login = async (req, res) => {
     if (!passwordIsValid) {
       return res.status(401).send({ message: "Error user not found" });
     }
-    var tokenAcces = jwt.sign({ id: user.id }, process.env.SECRET, {
+    var tokenAccess = jwt.sign({ id: user.id }, process.env.SECRET, {
       expiresIn: 86400,
     });
-    user.token = tokenAcces;
+    user.token = tokenAccess;
     res.status(200).send({
       user,
-      tokenAcces,
+      tokenAccess,
     });
   });
 };
@@ -161,12 +161,12 @@ const createUser = async (req, res) => {
       petAge: req.body.petAge,
       role: rol,
     };
-    const acessToken = generateAcessToken(modelData);
+    const accessToken = generateAccessToken(modelData);
     const response = await User.create(modelData)
       .then((data) => {
         const res = {
           error: false,
-          acessToken,
+          token: accessToken,
           data: data,
           message: "Usuario creado",
         };
