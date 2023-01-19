@@ -1,11 +1,11 @@
 import React, {useContext} from "react";
-import './CSS/style.css'
 import { Routes, Route, Link} from "react-router-dom";
+import { DataContext } from "./Context/DataContext";
+import { ProtectedRoute }from "./Components/ProtectedRoute/ProtectedRoute";
 import Home from "./Components/Home/Home";
 import Login from "./Components/Login/Login"
 import Register from "./Components/Register/Register";
-import { DataContext } from "./Context/DataContext";
-import { ProtectedRoute }from "./Components/ProtectedRoute/ProtectedRoute"
+import './CSS/style.css';
 
 function App() {
 
@@ -44,7 +44,7 @@ function Navigation() {
           <Link to="/login">Login</Link>
         </li>
         <li>
-          {/* <Link to="/register">Register</Link> */}
+          <Link to="/register">Register</Link>
         </li>
       </ul>
     </nav>
