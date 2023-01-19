@@ -9,10 +9,10 @@ export function useDataContext() {
 export const DataProveder = ({children}) => {
 
     const [user,setUser] = useState({
-        id:null
+        id:3
     })
     const [darkMode, setDarkMode] = useState(false)
-    const [datas, setData] = useState(null);
+    const [datas, setData] = useState({});
 
     useEffect(() => {
         if(user){

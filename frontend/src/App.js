@@ -8,12 +8,14 @@ import { DataContext } from "./Contex/DataContex";
 import { ProtectedRoute }from "./Components/ProtectedRoute/ProtectedRoute"
 import Header from "./Components/Header/Header";
 import SideBar from "./Components/sideBar/sidebar";
+import Perfil from "./pages/Profile/perfil";
+import EditProfile from "./pages/Profile/editProfile";
 
 function App() {
 
-  const { user, login, logout } = useContext(DataContext)
+  const { user, datas,login, logout } = useContext(DataContext)
 
-  console.log(user)
+  console.log(datas.name)
   return (
     <>
 
@@ -28,6 +30,10 @@ function App() {
         </Route>
         <Route exact path="/login"  element={<Login/>}/>
         <Route exact path="/register" element={<Register/>} />
+        <Route exact path="/profile" element={<Perfil/>} />
+        <Route exact path="/editprofile" element={<EditProfile/>} />
+
+
       </Routes>
       
       <Navigation/>
@@ -57,6 +63,9 @@ function Navigation() {
         </li>
         <li>
            <Link to="/register">Register</Link> 
+        </li>
+        <li>
+           <Link to="/profile">Register</Link> 
         </li>
       </ul>
     </nav>
