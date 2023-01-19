@@ -1,0 +1,15 @@
+.header{
+    background-color: #5CE1E6;
+    height:100px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.header .img-logo{
+    background-image: url('../../Img/logo-fecepets-color2.png');
+    width:120px;
+    height:100px;
+}
