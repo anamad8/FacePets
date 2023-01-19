@@ -138,7 +138,7 @@ const login = async (req, res) => {
   });
 };
 const createUser = async (req, res) => {
-
+ try{
     let rol = 0;
     let urlImage;
     if (req.file == undefined) {
@@ -177,6 +177,9 @@ const createUser = async (req, res) => {
         return res;
       });
     res.json(response);
+  } catch (e){
+    console.log(e);
+  }
  
 };
 const getUserPost = async (req, res) => {

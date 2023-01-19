@@ -2,14 +2,17 @@ import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
 import './Login.css';
 import img from '../Img/img-login-register.png';
-import {useNavigate } from "react-router-dom";
+import {useNavigate} from "react-router-dom";
+import { useDataContext } from '../../Context/DataContext';
 
 
 function Login() {
 
     const history = useNavigate()
 
-    const [login, setlogin] = useState({
+    const { login } = useDataContext();
+
+    const [inputs, setInputs] = useState({
         
         email:"",
         password:"",
@@ -18,12 +21,11 @@ function Login() {
 
     const[errors, setErrors] = useState({});
 
-    function handleChange(e) {
-        setlogin({
-            ...login,
-            [e.target.name] : e.target.value
-        })
-    }
+    const handleChange = (e) => {
+        const name = e.target.name;
+        const value = e.target.value;
+        setInputs(values => ({...values, [name]: value}))
+      }
 
     function validate(datos){
         let errors = {}
@@ -39,19 +41,36 @@ function Login() {
         
     } 
 
-    function handleSubmit(e){
+
+    const handleSubmit = (e) => {
         e.preventDefault();
 
-        const err = validate(login)
+        const err = validate(inputs)
 
         setErrors(err)
 
-        if(Object.keys(err).length === 0){
-            history('/register')
-        }
-
-    }
-
+        fetch('http://localhost:3030/user/login',{
+            method:'POST',
+            headers:{'Content-Type': 'application/json'},
+            body:JSON.stringify(inputs)
+          }).then((res) => {
+            if(Object.keys(err).length === 0){
+            res.json()          
+            .then(data => {
+            localStorage.setItem('user', JSON.stringify(data.user));
+            localStorage.setItem('token', data.tokenAccess);
+            let logged = data.user.id;
+            login(logged);
+            history("/");
+            })
+            }})
+          .catch((err) => {
+            console.log(err)
+            history("/Login");
+          })        
+            
+          }
+   
     
     return (
 
@@ -60,12 +79,12 @@ function Login() {
                     <div className='login-from'>
                         <form  className='' action="" onSubmit= {(e) => handleSubmit(e)}>
                             <input type="email" placeholder='escribe tu email' name="email"
-                                value= {login.email} onChange={(e) => handleChange(e)} /> 
+                                onChange={(e) => handleChange(e)} /> 
 
                             {errors.email ?<p>{errors.email}</p> : ""}
                             
                             <input type="password" placeholder='escribe tu password' name="password" 
-                                value= {login.password} onChange={(e) => handleChange(e)}/>
+                                onChange={(e) => handleChange(e)}/>
 
                             {errors.password ?<p>{errors.password}</p> : ""}
 
