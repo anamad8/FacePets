@@ -1,10 +1,11 @@
 import React from 'react';
 import Header from '../../Components/Header/Header';
+import HeaderLogin from '../../Components/Header/HeaderLogin';
 
 function Home() {
     return (
         <>
-            <Header/>
+            <HeaderLogin/>
             <h1>Home</h1> 
         </>
     )

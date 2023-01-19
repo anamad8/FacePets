@@ -1,0 +1,152 @@
+.headerLogin{
+    background-color: #5CE1E6;
+    height:100px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.headerLogin .img-logo{
+    background-image: url('../../Img/logo-fecepets-color2.png');
+    width:120px;
+    height:100px;
+}
+
+.headerLogin .input{
+    display: flex;
+
+}
+
+/* .headerLogin .input.active{
+    width: 100%;
+    display: block;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    top:30%;
+    left: 0;
+    right: 0;
+} */
+
+.headerLogin .search{
+    position:absolute;
+    margin-left: 20px;
+    top:40px;
+    font-size: 24px;
+    opacity: 0.5;
+}
+
+
+.headerLogin .links{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    margin-left: 50px;
+}
+
+.headerLogin input{
+    padding: 10px 35px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+.headerLogin .icon{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    font-size: 30px;
+    opacity: 0.5;
+    
+}
+
+.headerLogin .icon svg{
+    padding: 0 15px;
+}
+
+.headerLogin .headerUser{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+.headerLogin .headerUser img{
+    padding-right: 5px;
+}
+
+.headerLogin .CiLogin{
+    margin-right: 15px;
+    font-size: 30px;
+    opacity: 0.5;
+}
+
+
+@media (min-width: 867px) {
+    .headerLogin .btnBurguer{
+        margin-right: 10px;
+        display: none;
+    }
+
+}
+
+@media (max-width: 867px){
+    .headerLogin .input {
+        position: absolute;
+        top:-700px;
+        left: -2000px;
+    }
+
+    .headerLogin .links{
+        position: absolute;
+        top:-700px;
+        left: -2000px;
+    }
+
+    .headerLogin .links.activar{
+        width: 100%;
+        display: block;
+        padding: absolute;
+        margin-left: 0;
+        margin-right: 0;
+        top: 80%;
+        left: 0;
+        right: 0;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        justify-items: end;
+        background-color: #5CE1E6;
+        border-radius: 10% 0 0 100% ;
+        -webkit-border-radius: 10% 0 0 100% ;
+        -moz-border-radius: 10% 0 0 100% ;
+        -ms-border-radius: 10% 0 0 100% ;
+        -o-border-radius: 10% 0 0 100% ;
+}
+
+    .headerLogin .links.activar .darMode{
+        grid-column: 4/ 4;
+        grid-row: 1;
+    }
+
+    .headerLogin .links.activar .icon{
+        grid-column: 4/ 4;
+        grid-row: 2;
+    }
+
+    .headerLogin .links.activar .headerUser{
+        grid-column: 1/ 4;
+        grid-row: 1;
+    }
+
+    .headerLogin .links.activar .CiLogin{
+        grid-column: 4/ 4;
+        grid-row: 3;
+    }
+}
