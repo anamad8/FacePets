@@ -30,8 +30,11 @@ function App() {
       user ? (
         <button onClick={logout}>Logout</button> 
       ) : (
-        <button onClick={login}>Login</button> 
+        <br/>
       )
+      // ) : (
+      //   <button onClick={login}>Login</button> 
+      // )
     }
     </>
   );
