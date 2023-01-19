@@ -2,6 +2,7 @@ import React, {useContext} from "react";
 import { Routes, Route, Link} from "react-router-dom";
 import { DataContext } from "./Context/DataContext";
 import { ProtectedRoute }from "./Components/ProtectedRoute/ProtectedRoute";
+import Header from "./Components/Header/Header";
 import Home from "./Components/Home/Home";
 import Login from "./Components/Login/Login"
 import Register from "./Components/Register/Register";
@@ -14,6 +15,9 @@ function App() {
   console.log(user)
   return (
     <>
+      <header>
+        <Header />
+      </header>
       <Routes>
         <Route element={<ProtectedRoute user={user}/>}>
           <Route path="/home" element={<Home/>}/>

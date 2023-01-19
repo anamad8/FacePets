@@ -1,17 +1,13 @@
 import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
 import './Login.css';
-import Header from '../../Components/Header/Header';
 import img from '../Img/img-login-register.png';
 import {useNavigate } from "react-router-dom";
-import { DataContext } from '../../Context/DataContext';
 
 
 function Login() {
 
     const history = useNavigate()
-
-    const {user} = DataContext;
 
     const [login, setlogin] = useState({
         
@@ -50,22 +46,6 @@ function Login() {
 
         setErrors(err)
 
-        fetch('http://localhost:3030/user/login',{
-            method:'POST',
-            headers:{'Content-Type': 'application/json'},
-            body:JSON.stringify(login)
-          }).then((res) => 
-            res.json() 
-          ).then(data => {
-            localStorage.setItem('user', JSON.stringify(data.user));
-            localStorage.setItem('token', data.tokenAccess);
-            let logged = data.user;
-            user.setUser(logged);
-          })
-          .catch((err) => {
-            console.log(err)
-          })
-
         if(Object.keys(err).length === 0){
             history('/register')
         }
@@ -76,8 +56,6 @@ function Login() {
     return (
 
         <>
-            <Header/>
-
                 <div className='login'>
                     <div className='login-from'>
                         <form  className='' action="" onSubmit= {(e) => handleSubmit(e)}>

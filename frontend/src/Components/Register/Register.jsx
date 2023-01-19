@@ -58,7 +58,6 @@ function Register() {
 
     return (
         <>
-            <Header/>
             <div className='register'>
                     <div className='register-from'>
                         <form  className='' action="" onSubmit= {(e) => handleSubmit(e)}>
