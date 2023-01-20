@@ -1,4 +1,4 @@
-import React, {useContext} from "react";
+import React, {useContext, useEffect} from "react";
 import { Routes, Route, Link} from "react-router-dom";
 import { DataContext } from "./Context/DataContext";
 import { ProtectedRoute }from "./Components/ProtectedRoute/ProtectedRoute";
@@ -10,7 +10,36 @@ import './CSS/style.css';
 
 function App() {
 
-  const { user, login, logout } = useContext(DataContext)
+  const { user, login, logout, setUser, setDarkMode, darkMode } = useContext(DataContext)
+
+  useEffect(() => {
+    const userLogged = JSON.parse(localStorage.getItem('user'));
+    if(!userLogged){
+      setUser(null);
+    } else{
+      setUser(userLogged);
+    }
+  }, [])
+
+  // useEffect(() => {
+  //   let body = document.body;
+  //   let val=body.classList.toggle("active")
+  //   localStorage.setItem("modo",val)
+  //   let valor=localStorage.getItem("modo")
+  //   let btn = document.querySelector("#btn-darkMode")
+  //   const darkModeOn = JSON.parse(localStorage.getItem('mode'));
+  //   if (!darkModeOn){
+  //     setDarkMode(darkMode);
+  //     body.classList.remove("active")
+  //     btn.classList.remove("claro")
+  //     btn.classList.add("oscuro")
+  //   } else{
+  //     setDarkMode(!darkMode);
+  //     body.classList.add("active")
+  //     btn.classList.add("claro")
+  //     btn.classList.remove("oscuro")
+  //   }
+  // }, [])
 
   console.log(user)
   return (

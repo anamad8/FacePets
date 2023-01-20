@@ -72,7 +72,7 @@ export const DataProveder = ({children}) => {
 
 
     return(
-        <DataContext.Provider value={{user, datas, login, logout, darkMode, setDarkMode, handlePosition}}>
+        <DataContext.Provider value={{user, datas, login, logout, darkMode, setDarkMode, handlePosition, setUser}}>
             {children}
         </DataContext.Provider>
     )
