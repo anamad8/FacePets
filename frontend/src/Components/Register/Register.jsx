@@ -45,12 +45,12 @@ function Register() {
     function validate(datos){
         let errors = {}
 
-        if(!datos.name){
-            errors.name = '*Se requiere el nombre de usuario';
+        if(datos.name.length < 3){
+            errors.name = '*Minimo 3 letras negraso';
         }
 
-        if(!datos.petName){
-            errors.petName = '*Se requiere el nombre de la mascota';
+        if(datos.petName.length < 3){
+            errors.petName = '*Minimo 3 letras padre';
         }
 
         if(!datos.breed){
@@ -105,22 +105,20 @@ function Register() {
         setErrors(err)
 
 
-
+        if(Object.keys(err).length === 0){
             fetch('http://localhost:3030/user',{
                 method:'POST',
                 body: formData,
               }).then((res) => {
-                if(Object.keys(err).length === 0){
                     res.json()
                     .then((data) => {
                       console.log(data);
                       history('/login');
                     })
                  }
-                })
+                )
               .catch((err) => console.log(err))
-            
-        }
+        }}
 
     
 

@@ -24,26 +24,6 @@ function App() {
     }
   }, [])
 
-  // useEffect(() => {
-  //   let body = document.body;
-  //   let val=body.classList.toggle("active")
-  //   localStorage.setItem("modo",val)
-  //   let valor=localStorage.getItem("modo")
-  //   let btn = document.querySelector("#btn-darkMode")
-  //   const darkModeOn = JSON.parse(localStorage.getItem('mode'));
-  //   if (!darkModeOn){
-  //     setDarkMode(darkMode);
-  //     body.classList.remove("active")
-  //     btn.classList.remove("claro")
-  //     btn.classList.add("oscuro")
-  //   } else{
-  //     setDarkMode(!darkMode);
-  //     body.classList.add("active")
-  //     btn.classList.add("claro")
-  //     btn.classList.remove("oscuro")
-  //   }
-  // }, [])
-
   console.log(user)
   return (
     <>
@@ -52,11 +32,13 @@ function App() {
       </header>
       <Routes>
         <Route element={<ProtectedRoute user={user}/>}>
+
           <Route path="/home" element={<Home/>}/>
           <Route path="/profile" element={<Profile/>} />
           <Route path="/editprofile" element={<EditProfile/>} /> 
           
         </Route>
+
         <Route exact path="/login"  element={<Login/>}/>
         <Route exact path="/register" element={<Register/>} />
 

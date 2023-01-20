@@ -3,13 +3,13 @@ const validateRequest = require('../middlewares/validateRequest')
 
 const validateUser = (req,res,next) =>{
     const schema = Joi.object({
-        name: Joi.string().min(5).max(100).required()
+        name: Joi.string().min(2).max(100).required()
         .messages({
             'string.empty': "Ingresa el Nombre  del Usuario",
             'string.min': "El nombre del Usuario debe ser mayor a 5 caracteres",
             'any.required': "Ingresa el Nombre  del Usuario"
         }),
-        petName:Joi.string().min(5).max(100).required()
+        petName:Joi.string().min(2).max(100).required()
         .messages({
             'string.empty': "Ingresa el Nombre de su mascota",
             'string.min': "El largo del nombre debe ser mayor a 5 caracteres",
