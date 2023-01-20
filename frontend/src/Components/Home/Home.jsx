@@ -1,11 +1,13 @@
 import React from 'react';
-import HeaderLogin from '../../Components/Header/HeaderLogin';
+// import { useDataContext } from '../../Context/DataContext';
 
 function Home() {
+
+    // const { datas } = useDataContext();
+
     return (
         <>
-            <HeaderLogin/>
-            <h1>Home</h1> 
+
         </>
     )
 }

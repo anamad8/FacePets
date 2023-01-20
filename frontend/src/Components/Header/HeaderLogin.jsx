@@ -1,12 +1,11 @@
 import React,{useContext, useState} from 'react';
 import './HeaderLogin.css';
 import Header from './Header';
-import { DataContext } from '../../Context/DataContext';
+import { DataContext, useDataContext } from '../../Context/DataContext';
 import DarkMode from '../DarkMode/DarkMode';
 import { BiUserCircle } from "react-icons/bi";
 import { CiBellOn, CiLogin } from "react-icons/ci";
 import { FaEnvelope } from "react-icons/fa";
-import img from '../Img/image3.png'
 import imgLogo from '../Img/logo-fecepets-color2.png'
 import BtnBurguer from '../BtnBurguer/BtnBurguer';
 import { AiOutlineSearch } from "react-icons/ai";
@@ -15,7 +14,9 @@ import {useNavigate} from "react-router-dom";
 
 function HeaderLogin() {
 
-    const { user, setUser } = useContext(DataContext)
+    const { user, setUser } = useContext(DataContext);
+
+    const { datas } = useDataContext();
 
     const [btnMenu, setBtnMenu] = useState(false);
 
@@ -26,7 +27,6 @@ function HeaderLogin() {
     }
 
     function logOutRedirect() {
-
         setUser(null)
         localStorage.clear();
         history("/login");
@@ -57,8 +57,8 @@ function HeaderLogin() {
                             <CiBellOn />
                         </div>
                         <div className='headerUser'>
-                            <img src={img} alt="" />
-                            <p>Nombre</p>
+                            <img src={datas.image} />
+                            <p>{datas.petName} </p>
                         </div>
                         <CiLogin className='CiLogin' onClick={logOutRedirect}/>
                         

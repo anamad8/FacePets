@@ -19,7 +19,7 @@
 
 }
 
-/* .headerLogin .input.active{
+.headerLogin .input.active{
     width: 100%;
     display: block;
     position: absolute;
@@ -28,7 +28,7 @@
     top:30%;
     left: 0;
     right: 0;
-} */
+} 
 
 .headerLogin .search{
     position:absolute;
@@ -78,6 +78,9 @@
 }
 
 .headerLogin .headerUser img{
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
     padding-right: 5px;
 }
 
