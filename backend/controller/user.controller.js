@@ -5,6 +5,7 @@ const User = db.user
 const jwt = require("jsonwebtoken");
 const bcryptjs = require("bcryptjs");
 require("dotenv").config();
+
 const generateAccessToken = (user) => {
   return jwt.sign(user, process.env.SECRET, { expiresIn: "5m" });
 };
@@ -53,6 +54,7 @@ const updateBanner = async(req,res)=>{
   User.update({
     imageBanner: urlImage1
   
+
   },{
       where: {
         id: req.params.id,
@@ -133,7 +135,7 @@ const login = async (req, res) => {
     user.token = tokenAccess;
     res.status(200).send({
       user,
-      tokenAccess,
+      tokenAccess
     });
   });
 };
@@ -180,6 +182,7 @@ const createUser = async (req, res) => {
   } catch (e){
     console.log(e);
   }
+
  
 };
 const getUserPost = async (req, res) => {
@@ -206,3 +209,4 @@ module.exports = {
  getUserPost,
  updateBanner
 };
+
