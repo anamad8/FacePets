@@ -29,7 +29,7 @@ return(
         <div className="profileData">
         <h1 style={{
             display:'inline'
-        }}>{datas.petName}</h1>{datas.gender ==0 ? <span> <BsGenderFemale/> </span>:<span> <BsGenderMale/></span>}
+        }}>{datas.petName}</h1>{datas.gender == 1 ? <span> <BsGenderFemale/> </span>:<span> <BsGenderMale/></span>}
         <span className="profileAge"> Edad: {datas.petAge}</span>
         <h1>{datas.breed}</h1>
         </div>

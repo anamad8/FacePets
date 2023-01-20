@@ -21,15 +21,20 @@ function Register() {
     });
 
     const[errors, setErrors] = useState({});
+    const [stateSelect, setStateSelect] = useState(input.gender);
 
     const handleChange = (e) => {
         if(e.target.name === 'image'){
             setInputs({
               ...input,
               [e.target.name]: e.target.files,
-            })
-    
-          }else{
+            })} else if(e.target.name === "gender"){
+                setInputs({
+                    ...input,
+                    [e.target.name]: e.target.value,
+                  });
+                  setStateSelect(e.target.value);
+            }else{
               setInputs({
               ...input,
               [e.target.name]: e.target.value
@@ -146,8 +151,15 @@ function Register() {
                             {errors.breed ?<p>{errors.breed}</p> : ""}
 
                             Sexo
-                            <input type="text" placeholder='Ingrese el sexo de su mascota' name="gender" 
-                                 onChange={handleChange}/>
+                            <select
+                            value={stateSelect}
+                            name="gender"
+                            onChange={handleChange}
+                            >
+                                <option value="">Seleccione una...</option>
+                                <option value="0">Masculino</option>
+                                <option value="1">Femenino</option>
+                            </select>
                             {errors.gender ?<p>{errors.gender}</p> : ""}
 
                             Descripción

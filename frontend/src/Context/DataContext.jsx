@@ -7,7 +7,7 @@ export function useDataContext() {
     return useContext(DataContext);
   }
 
-export const DataProveder = ({children}) => {
+export const DataProvider = ({children}) => {
 
 
     const [user,setUser] = useState()
