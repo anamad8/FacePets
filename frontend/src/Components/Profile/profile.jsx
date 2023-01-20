@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react"
 import { BsPencil, BsGenderFemale, BsGenderMale } from "react-icons/bs"
 import { Link } from "react-router-dom"
-import { useDataContext } from "../../Contex/DataContex"
+import { useDataContext } from "../../Context/DataContext"
 import './profile.css'
 
 

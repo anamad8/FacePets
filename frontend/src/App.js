@@ -1,10 +1,11 @@
-
 import React, {useContext, useEffect} from "react";
 import { Routes, Route, Link} from "react-router-dom";
 import { DataContext } from "./Context/DataContext";
 import { ProtectedRoute }from "./Components/ProtectedRoute/ProtectedRoute";
-import Header from "./Components/Header/Header";
+import SideBar from "./Components/sideBar/sidebar";
 import HeaderLogin from "./Components/Header/HeaderLogin";
+import Profile from "./Components/Profile/profile";
+import EditProfile from "./Components/Profile/editProfile";
 import Home from "./Components/Home/Home";
 import Login from "./Components/Login/Login"
 import Register from "./Components/Register/Register";
@@ -52,10 +53,15 @@ function App() {
       <Routes>
         <Route element={<ProtectedRoute user={user}/>}>
           <Route path="/home" element={<Home/>}/>
+          <Route path="/profile" element={<Profile/>} />
+          <Route path="/editprofile" element={<EditProfile/>} /> 
+          
         </Route>
         <Route exact path="/login"  element={<Login/>}/>
         <Route exact path="/register" element={<Register/>} />
+
       </Routes>
+      <SideBar />
     </>
   );
 }

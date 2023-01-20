@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 
-
 import {BiHomeAlt , BiShapePolygon} from "react-icons/bi";
 import { Link } from "react-router-dom";
-import { useDataContext } from "../../Contex/DataContex";
+import { useDataContext } from "../../Context/DataContext";
 import './sideBar.css';
 
 
@@ -11,20 +10,20 @@ import './sideBar.css';
 
 export function SideBar(){
 
-    const {datas} = useDataContext()
+    const {datas, user} = useDataContext()
     const [state, setState]= useState("menuCollapsed")
     const cambiar=()=>{
         if(state == "menuCollapsed"){
          setState("menuExpanded")
-         document.querySelector('body').classList.toggle('bodyExpanded')
+        
          console.log(datas)
         }
         else{
             setState("menuCollapsed")
-            document.querySelector('body').classList.toggle('bodyExpanded')
+            
         }
     }
-    if(!datas){
+    if(!user){
         return(
         <></>)
     }
@@ -47,11 +46,11 @@ export function SideBar(){
                 <div id="menuItems">
                     
                <div className="item">
-                <Link to="/">
+                <Link to="/profile">
                         <a href="#">
                              <BiHomeAlt className="icon" />
                             <div className="title">
-                                <span>Monedero</span>
+                                <span>Perfil</span>
                                 </div>
                         </a>
                         </Link>

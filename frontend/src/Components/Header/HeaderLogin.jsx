@@ -2,6 +2,7 @@ import React,{useContext, useState} from 'react';
 import './HeaderLogin.css';
 import Header from './Header';
 import { DataContext, useDataContext } from '../../Context/DataContext';
+import { Link } from "react-router-dom"
 import DarkMode from '../DarkMode/DarkMode';
 import { BiUserCircle } from "react-icons/bi";
 import { CiBellOn, CiLogin } from "react-icons/ci";
@@ -40,7 +41,7 @@ function HeaderLogin() {
 
                 <div className='headerLogin'>
                     <div className='img-logo'>
-                        <img src={imgLogo} alt="" className='img-logo' />
+                    <Link to="/home"><img src={imgLogo} alt="" className='img-logo' /></Link>
                     </div>
                     <div className={`input ${btnMenu ? 'activar' : '' } `}>
                         <AiOutlineSearch className='search'/>
@@ -51,9 +52,8 @@ function HeaderLogin() {
                         <div className='darMode'>
                             <DarkMode/>
                         </div>
-                        <div className='icon'>
-                            
-                            <BiUserCircle />
+                        <div className='icon' >            
+                            <Link to="/profile"><BiUserCircle/></Link>
                             <FaEnvelope />
                             <CiBellOn />
                         </div>

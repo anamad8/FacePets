@@ -5,7 +5,7 @@
 .flexContainer .containerProfile {
   border-radius: 10px;
   width: 60%;
-  background-color: #5CE1E6;
+  background-color: #03b5bb transparent;
   height: max-content;
   padding: 20px;
   box-shadow: 1px 1px 5px rgb(138, 137, 137);
