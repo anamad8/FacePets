@@ -1,6 +1,6 @@
 import { render } from "@testing-library/react";
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { useDataContext} from "../../Context/DataContext";
 import './editProfile.css'
 
@@ -162,7 +162,7 @@ const EditProfile = () => {
                 ></textarea>
               </div>
               <div className="button">
-                <button type="submit">Editar</button>
+                <Link to="/profile"><button type="submit">Editar</button></Link>
               </div>
             </div>
           </form>
