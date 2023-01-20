@@ -1,14 +1,14 @@
 .login{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    
+
 }
 
 .login-from{
     grid-column: 1 / 2;
     grid-row: 1;
     box-sizing: border-box;
-
+    border-radius: 15px;
     position: absolute;
     margin-left: 60px;
     width: 400px;
