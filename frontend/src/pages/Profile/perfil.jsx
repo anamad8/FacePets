@@ -1,24 +1,15 @@
 import React, { useEffect, useState } from "react"
 import { BsPencil, BsGenderFemale, BsGenderMale } from "react-icons/bs"
 import { Link } from "react-router-dom"
-import { useUserContext } from "../provider/userProvider"
-
+import { useDataContext } from "../../Contex/DataContex"
+import './profile.css'
 
 
 const Perfil=()=>{
 
-let vari= 0;
-const btton = document.getElementById('modalContainer')
-const cambiarEdit =()=>{
-    if(vari ==0){
-  btton.classList.add('show')
-  vari=1;
-}else{
-btton.classList.remove('show')
-vari=0
-  }
-}
-const {datas} = useUserContext()
+
+
+const {datas} = useDataContext()
 
 let styles={
     backgroundImage: "url(" + datas.imageBanner + ")",
@@ -32,7 +23,7 @@ return(
     <div className="flexContainer">
     <div className="containerProfile">
         <div className="profileImg" style={styles}>
-            <Link to="/edit"><BsPencil className="icon" onClick={cambiarEdit}/></Link>
+            <Link to="/editProfile"><BsPencil className="icon" /></Link>
             <img src={datas.image} alt='perfilImg' />
         </div>
         <div className="profileData">

@@ -1,0 +1,153 @@
+:root {
+  --width: 300px;
+  --width-collapsed: 50px;
+  --padding: 10px;
+}
+
+body {
+  margin-left: 50px;
+}
+
+.bodyExpanded {
+  margin-left: 300px;
+}
+
+#sidemenu {
+  background-color: rgba(234, 238, 2, 0.5);
+  z-index: 2;
+  color: white;
+  position: fixed;
+  height: 100%;
+  left: 0;
+  top: 0;
+  border-top-right-radius: 7px;
+  border-bottom-right-radius: 7px;
+  box-shadow: 1px 1px 4px rgb(145, 145, 145);
+}
+#sidemenu a {
+  color: white;
+  text-decoration: none;
+}
+#sidemenu #menuHeader {
+  box-sizing: border-box;
+  border-bottom: solid 1px white;
+}
+#sidemenu #menuHeader #title {
+  box-sizing: border-box;
+  overflow: hidden;
+}
+#sidemenu #menuHeader #menu-btn {
+  vertical-align: middle;
+}
+#sidemenu #menuHeader #menuBtn {
+  margin-top: 12px;
+  display: inline-block;
+  cursor: pointer;
+  padding: 10px;
+  width: 50px;
+  box-sizing: border-box;
+}
+#sidemenu #menuHeader #menuBtn .btn-hamburger {
+  background-color: rgb(0, 0, 0);
+  width: 100%;
+  height: 2px;
+  margin: 5px 0;
+}
+#sidemenu #profile {
+  padding: var(--padding) 0;
+  text-align: center;
+}
+#sidemenu #profile #name {
+  font-size: 24px;
+  padding: 10px;
+  overflow: hidden;
+}
+#sidemenu #profile #photo {
+  font-size: 24px;
+  overflow: hidden;
+  padding: var(--padding);
+  margin: 0 auto;
+}
+#sidemenu #profile #photo img {
+  border-radius: 50%;
+}
+#sidemenu #menuItems {
+  overflow: hidden;
+}
+#sidemenu #menuItems .separator {
+  height: 20px;
+}
+#sidemenu #menuItems .item {
+  width: 300px;
+  box-shadow: 1px 1px 1px;
+}
+#sidemenu #menuItems .item .title {
+  padding: 10px;
+}
+#sidemenu #menuItems .item .icon {
+  display: inline-block;
+  width: 50px;
+}
+#sidemenu #menuItems .item .icon img {
+  width: 100%;
+}
+#sidemenu #menuItems .item .icon,
+#sidemenu #menuItems .item .title {
+  font-size: 14px;
+  vertical-align: middle;
+  overflow: hidden;
+  display: inline-block;
+}
+#sidemenu #menuItems .item a {
+  display: block;
+}
+#sidemenu #menuItems .item a:hover {
+  background-color: rgb(28, 23, 23);
+}
+
+.menuExpanded {
+  width: 300px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.menuExpanded #menuHeader #title {
+  display: inline-block;
+  width: calc(100% - 50px);
+  margin-right: -5px;
+  padding: 20px;
+}
+.menuExpanded #menuHeader #title span {
+  width: calc(var(--width) - var(--width-collapsed) - 5px);
+  overflow: hidden;
+}
+.menuExpanded #profile #photo img {
+  width: 150px;
+  height: 7rem;
+}
+.menuExpanded #profile #name {
+  width: 100px;
+}
+
+.menuCollapsed {
+  width: 50px;
+}
+.menuCollapsed #profile #photo {
+  width: 2rem;
+}
+.menuCollapsed #profile #photo img {
+  height: 2rem;
+  width: 100%;
+}
+.menuCollapsed #profile #name {
+  display: none;
+}
+.menuCollapsed #menuHeader #title {
+  width: 0;
+  height: 0;
+  padding: 0;
+  margin: 0;
+}
+.menuCollapsed #item {
+  width: 100px;
+}
+
+/*# sourceMappingURL=sideBar.css.map */

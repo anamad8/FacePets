@@ -1,16 +1,17 @@
 import React, { useState } from "react";
 
-import {useUserContext } from "../provider/userProvider";
+
 import {BiHomeAlt , BiShapePolygon} from "react-icons/bi";
 import { Link } from "react-router-dom";
-
+import { useDataContext } from "../../Contex/DataContex";
+import './sideBar.css';
 
 
 
 
 export function SideBar(){
-    const {datas}= useUserContext()
 
+    const {datas} = useDataContext()
     const [state, setState]= useState("menuCollapsed")
     const cambiar=()=>{
         if(state == "menuCollapsed"){

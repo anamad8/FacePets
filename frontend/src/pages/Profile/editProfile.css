@@ -1,0 +1,65 @@
+#modalContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+#modalContainer .modal {
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  background-color: #5CE1E6;
+  width: 500px;
+}
+#modalContainer .modal .button {
+  text-align: center;
+}
+#modalContainer .modal .button button {
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 15px;
+  background-color: greenyellow;
+  color: white;
+}
+#modalContainer .modal .button button:hover {
+  cursor: pointer;
+}
+#modalContainer .modal .editImagen {
+  padding: 20px;
+  margin: 15px;
+  box-shadow: 1px 1px 10px rgb(196, 196, 196);
+  text-align: center;
+}
+#modalContainer .modal .editImagen label {
+  display: block;
+}
+#modalContainer .modal .editImagen img {
+  width: 250px;
+  border-radius: 50%;
+  height: 15rem;
+  box-shadow: 1px 1px 20px gray;
+  margin: 5px;
+}
+#modalContainer .modal #textarea {
+  text-align: center;
+}
+#modalContainer .modal #textarea label {
+  display: block;
+}
+#modalContainer .modal .input {
+  box-shadow: 1px 1px 10px rgb(228, 226, 226);
+  border-radius: 10px;
+  margin: 15px;
+  padding: 10px;
+}
+#modalContainer .modal .input label {
+  margin-right: 5px;
+}
+#modalContainer .modal .input input {
+  border: none;
+}
+#modalContainer .modal .input textarea {
+  resize: none;
+}
+
+/*# sourceMappingURL=editProfile.css.map */
