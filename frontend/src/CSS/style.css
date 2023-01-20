@@ -4,7 +4,7 @@
 }
 
 .active{
-    background-color: #000;
+    background-color: rgb(4, 111, 88);
     height: 100%;
 }
 
@@ -22,4 +22,10 @@
 .moving-img img{
     animation: updown 3s linear infinite;
     -webkit-animation: updown 3s linear infinite;
+}
+
+@media(max-width:937px){
+    .moving-img{
+        display: none;
+    }
 }

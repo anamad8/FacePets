@@ -5,7 +5,7 @@ import img from '../Img/img-login-register.png';
 function MovingBanner() {
   return (
     <div className='moving-img'>
-        <img src={img} alt="" />
+        <img src={img} />
         <p>Crea una página para compartir las historia de tu mascota.</p>
     </div>
   )

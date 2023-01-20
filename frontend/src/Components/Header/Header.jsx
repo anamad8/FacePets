@@ -1,11 +1,13 @@
 import React from 'react';
 import './Header.css';
 import DarkMode from '../DarkMode/DarkMode';
+import imgLogo from '../Img/logo-fecepets-color2.png'
 
 function Header() {
     return (
         <div className='header'>
             <div className='img-logo'>
+                <img src={imgLogo} alt="" className='img-logo' />
             </div>
             <DarkMode/>
         </div>

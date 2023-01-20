@@ -3,6 +3,7 @@ import { Routes, Route, Link} from "react-router-dom";
 import { DataContext } from "./Context/DataContext";
 import { ProtectedRoute }from "./Components/ProtectedRoute/ProtectedRoute";
 import Header from "./Components/Header/Header";
+import HeaderLogin from "./Components/Header/HeaderLogin";
 import Home from "./Components/Home/Home";
 import Login from "./Components/Login/Login"
 import Register from "./Components/Register/Register";
@@ -45,7 +46,7 @@ function App() {
   return (
     <>
       <header>
-        <Header />
+        <HeaderLogin />
       </header>
       <Routes>
         <Route element={<ProtectedRoute user={user}/>}>
@@ -54,37 +55,27 @@ function App() {
         <Route exact path="/login"  element={<Login/>}/>
         <Route exact path="/register" element={<Register/>} />
       </Routes>
-      <Navigation/>
-    {
-      user ? (
-        <button onClick={logout}>Logout</button> 
-      ) : (
-        <></>
-      )
-      // ) : (
-      //   <button onClick={login}>Login</button> 
-      // )
-    }
+      {/* <Navigation/> */}
     </>
   );
 }
 
-function Navigation() {
-  return (
-    <nav>
-      <ul>
-        <li>
-          <Link to="/home">Home</Link>
-        </li>
-        <li>
-          <Link to="/login">Login</Link>
-        </li>
-        <li>
-          <Link to="/register">Register</Link>
-        </li>
-      </ul>
-    </nav>
-  );
-}
+// function Navigation() {
+//   return (
+//     <nav>
+//       <ul>
+//         <li>
+//           <Link to="/home">Home</Link>
+//         </li>
+//         <li>
+//           <Link to="/login">Login</Link>
+//         </li>
+//         <li>
+//           <Link to="/register">Register</Link>
+//         </li>
+//       </ul>
+//     </nav>
+//   );
+// }
 
 export default App;

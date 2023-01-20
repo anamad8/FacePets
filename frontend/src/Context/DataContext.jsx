@@ -1,12 +1,14 @@
 /* eslint-disable no-undef */
 import React, {createContext, useState, useEffect, useContext} from "react";
 
+
 export const DataContext = createContext({});
 export function useDataContext() {
     return useContext(DataContext);
   }
 
 export const DataProveder = ({children}) => {
+
 
     const [user,setUser] = useState()
     const [darkMode, setDarkMode] = useState(false)
@@ -57,8 +59,10 @@ export const DataProveder = ({children}) => {
     }
 
     const logout = () => {
+        
         setUser(null)
         localStorage.clear();
+        
     }
 
     const login = (id) => {
