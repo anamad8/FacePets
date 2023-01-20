@@ -30,7 +30,7 @@ function App() {
       user ? (
         <button onClick={logout}>Logout</button> 
       ) : (
-        <br/>
+        <></>
       )
       // ) : (
       //   <button onClick={login}>Login</button> 
