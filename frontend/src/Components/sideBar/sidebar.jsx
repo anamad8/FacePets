@@ -54,6 +54,14 @@ export function SideBar(){
                                 </div>
                         </a>
                         </Link>
+                        <Link to="/AboutUs">
+                        <a href="#">
+                             <BiHomeAlt className="icon" />
+                            <div className="title">
+                                <span>¿Quienes Somos?</span>
+                                </div>
+                        </a>
+                        </Link>
                     </div>
                     
                     
