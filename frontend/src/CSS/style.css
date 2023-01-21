@@ -3,11 +3,11 @@
     padding: 0;
 }
 body{
-    background-color: rgb(3, 201, 171);
+    background-color: #EDE1D1;
 }
 
 .active{
-    background-color: rgb(4, 111, 88);
+    background-color: #092701;
 
     height: 100%;
 }
@@ -16,13 +16,10 @@ body{
     color: #fff;
 }
 
-.moving-img{
-
-        grid-column: 2 / 2;
-        grid-row: 1;
-        justify-content: center;
-    
+.active h1{
+    color: #fff;
 }
+
 .moving-img img{
     animation: updown 3s linear infinite;
     -webkit-animation: updown 3s linear infinite;

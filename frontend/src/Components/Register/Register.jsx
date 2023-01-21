@@ -26,20 +26,20 @@ function Register() {
     const handleChange = (e) => {
         if(e.target.name === 'image'){
             setInputs({
-              ...input,
-              [e.target.name]: e.target.files,
+                ...input,
+                [e.target.name]: e.target.files,
             })} else if(e.target.name === "gender"){
                 setInputs({
                     ...input,
                     [e.target.name]: e.target.value,
-                  });
-                  setStateSelect(e.target.value);
+                });
+                setStateSelect(e.target.value);
             }else{
-              setInputs({
-              ...input,
-              [e.target.name]: e.target.value
-            })
-          }
+                setInputs({
+                    ...input,
+                [e.target.name]: e.target.value
+                })
+        }
     }
 
     function validate(datos){
@@ -109,18 +109,18 @@ function Register() {
             fetch('http://localhost:3030/user',{
                 method:'POST',
                 body: formData,
-              }).then((res) => {
+            }).then((res) => {
                     res.json()
                     .then((data) => {
-                      console.log(data);
-                      history('/login');
+                        console.log(data);
+                        history('/login');
                     })
-                 }
+                }
                 )
-              .catch((err) => console.log(err))
+            .catch((err) => console.log(err))
         }}
 
-    
+
 
     return (
         <>
@@ -128,27 +128,27 @@ function Register() {
                     <div className='register-from'>
                         <form  className='' action="" onSubmit= {handleSubmit}>
 
-                            Nombre del usuario
+                            <label htmlFor="name">Nombre del usuario</label> 
                             <input type="text" placeholder='Ingrese tu nombre' name="name" 
-                                 onChange={handleChange}/>
+                                onChange={handleChange}/>
                             {errors.name ?<p>{errors.name}</p> : ""}
 
-                            Nombre de la mascota
+                            <label htmlFor="petName">Nombre de la mascota</label> 
                             <input type="text" placeholder='Ingrese el nombre de tu mascota' name="petName" 
-                                 onChange={handleChange}/>
+                                onChange={handleChange}/>
                             {errors.petname ?<p>{errors.petname}</p> : ""}
 
-                            Edad
+                            <label htmlFor="petAge">Edad</label>
                             <input type="number" placeholder='Ingrese la edad de su mascota' name="petAge" 
-                                 onChange={handleChange}/>
+                                onChange={handleChange}/>
                             {errors.petAge ?<p>{errors.petAge}</p> : ""}
 
-                            Raza
+                            <label htmlFor="breed">Raza</label>
                             <input type="text" placeholder='Ingrese la raza de tu mascota' name="breed" 
-                                 onChange={handleChange}/>
+                                onChange={handleChange}/>
                             {errors.breed ?<p>{errors.breed}</p> : ""}
 
-                            Sexo
+                            <label htmlFor="gender">Sexo</label>
                             <select
                             value={stateSelect}
                             name="gender"
@@ -160,23 +160,23 @@ function Register() {
                             </select>
                             {errors.gender ?<p>{errors.gender}</p> : ""}
 
-                            Descripción
+                            <label htmlFor="description">Descripción</label>
                             <input type="text" placeholder='Ingrese la descripción de tu mascota' name="description" 
-                                 onChange={handleChange}/>
+                                onChange={handleChange}/>
                             {errors.description ?<p>{errors.description}</p> : ""}
-
-                            Imagen de Perfil
+                            
+                            <label htmlFor="image">Imagen de Perfil</label>
                             <input type="file" placeholder='Ingrese una imagen de perfil para su mascota' name="image" onChange={handleChange}/>
                             {errors.image ?<p>{errors.image}</p> : ""}
 
-                            Correo electrónico
+                            <label htmlFor="email">Correo electrónico</label>
                             <input type="email" placeholder='Ingrese su correo electrónico' name="email" 
-                                 onChange={(e) => handleChange(e)}/>
+                                onChange={(e) => handleChange(e)}/>
                             {errors.email ?<p>{errors.email}</p> : ""}
 
-                            Contraseña
+                            <label htmlFor="password">Contraseña</label>
                             <input type="password" placeholder='Ingrese su password' name="password" 
-                                 onChange={(e) => handleChange(e)}/>
+                                onChange={(e) => handleChange(e)}/>
                             {errors.password ?<p>{errors.password}</p> : ""}
 
                             <button>Crea tu cuenta</button>

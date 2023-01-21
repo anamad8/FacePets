@@ -1,7 +1,7 @@
 import React from 'react';
 import './Header.css';
 import DarkMode from '../DarkMode/DarkMode';
-import imgLogo from '../Img/logo-fecepets-color2.png'
+import imgLogo from '../Img/Pet-logo.png'
 
 function Header() {
     return (

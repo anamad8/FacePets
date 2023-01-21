@@ -7,7 +7,7 @@ import DarkMode from '../DarkMode/DarkMode';
 import { BiUserCircle } from "react-icons/bi";
 import { CiBellOn, CiLogin } from "react-icons/ci";
 import { FaEnvelope } from "react-icons/fa";
-import imgLogo from '../Img/logo-fecepets-color2.png'
+import imgLogo from '../Img/Pet-logo.png'
 import BtnBurguer from '../BtnBurguer/BtnBurguer';
 import { AiOutlineSearch } from "react-icons/ai";
 import {useNavigate} from "react-router-dom";
