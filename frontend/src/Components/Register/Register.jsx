@@ -57,12 +57,12 @@ function Register() {
         let errors = {}
 
         if(datos.name.length < 3){
-            errors.name = '*Minimo 3 letras negraso';
+            errors.name = '*Minimo 3 letras';
             
         }
 
         if(datos.petName.length < 3){
-            errors.petName = '*Minimo 3 letras padre';
+            errors.petName = '*Minimo 3 letras';
             
 
         }
