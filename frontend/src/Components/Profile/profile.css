@@ -42,6 +42,8 @@ margin-left: 10px;
 }
 .flexContainer .containerProfile .profileImg img {
   min-width: 200px;
+  max-width: 200px;
+
   border-radius: 50%;
   height: 13rem;
   box-shadow: 1px 1px 20px gray;

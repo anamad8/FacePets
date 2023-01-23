@@ -5,7 +5,7 @@ import { useDataContext} from "../../Context/DataContext";
 import './editProfile.css'
 
 const EditProfile = () => {
-  const { datas } = useDataContext();
+  const { datas, user } = useDataContext();
   const navigate = useNavigate(0);
   const [state, setState] = useState({
     name: "",
@@ -42,6 +42,7 @@ const EditProfile = () => {
     const formdataBanner = new FormData();
     const formData = new FormData();
     if (state.banner != "") {
+      formdataBanner.append("imageBanner", state.banner[0]);
     }
     if (state.name != "") {
       formData.append("name", state.name);
@@ -64,17 +65,19 @@ const EditProfile = () => {
     if (state.image != "") {
       formData.append("image", state.image[0]);
     }
-    formdataBanner.append("imageBanner", state.banner[0]);
-    fetch("http://localhost:3030/user/banner/" + datas.id, {
+   
+    fetch("http://localhost:3030/user/banner/" + user.id, {
       method: "PATCH",
       body: formdataBanner,
     })
       .then((res) => res.json())
-      .then((data) => {
+      .then(data => {
         console.log(data);
+        window.location.reload(false);
       })
       .catch((err) => console.log(err));
-    fetch("http://localhost:3030/user/" + datas.id, {
+
+    fetch("http://localhost:3030/user/" + user.id, {
       method: "PATCH",
       body: formData,
     })
