@@ -10,7 +10,8 @@ import Home from "./Components/Home/Home";
 import Login from "./Components/Login/Login"
 import Register from "./Components/Register/Register";
 import './CSS/style.css';
-import AboutUsCards from "./Components/AboutUs/AboutUsCards";
+import AboutUs from "./Components/AboutUs/AboutUs";
+
 
 function App() {
 
@@ -36,7 +37,7 @@ function App() {
 
           <Route path="/home" element={<Home/>}/>
           <Route path="/profile" element={<Profile/>} />
-          <Route path="/AboutUs" element={<AboutUsCards/>} />
+          <Route path="/AboutUs" element={<AboutUs/>} />
           <Route path="/editprofile" element={<EditProfile/>} /> 
           
         </Route>
