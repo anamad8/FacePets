@@ -19,9 +19,11 @@ function AboutUs() {
         <div className="face back">
           <h3>Facundo Bustos</h3>
           <p>Hola, Yo soy Facundo! Pero la gente de confianza me dice memo. Vivo en mar del plata y tengo 26 años, me encanta la tecnologia, los videojuegos y claro tambien viajar. Estoy estudiando programación en CoderHouse, tambien en DevPlace y estoy inscripto en la UTN para este ciclo 2023. Si queres saber mas sobre mi te dejo mi LinkedIN</p>
+          <a href="https://www.linkedin.com/in/facundo-bustos-b86414251/" target='_blank'>
           <div className="link">
-            <a href="https://www.linkedin.com/in/facundo-bustos-b86414251/" target='_blank'>Acceder mi LinkedIN</a>
+            Acceder mi LinkedIN
           </div>
+          </a>
         </div>
       </div>
       <div className="card">
@@ -32,9 +34,11 @@ function AboutUs() {
         <div className="face back">
           <h3>Anabel Amad</h3>
           <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores repellendus necessitatibus recusandae in? Suscipit explicabo sequi accusantium nemo repudiandae, dicta voluptatum totam iste commodi ad quasi, incidunt rerum ex laudantium.</p>
+          <a href="https://www.linkedin.com/in/anabel-amad-" target='_blank'>
           <div className="link">
-            <a href="https://www.linkedin.com/in/anabel-amad-" target='_blank'>Acceder mi LinkedIN</a>
+            Acceder mi LinkedIN
           </div>
+          </a>
         </div>
       </div>
       <div className="card">
@@ -44,11 +48,8 @@ function AboutUs() {
         </div>
         <div className="face back">
           <h3>Marcelo Albano</h3>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores repellendus necessitatibus recusandae in? Suscipit explicabo sequi accusantium nemo repudiandae, dicta voluptatum totam iste commodi ad quasi, incidunt rerum ex laudantium.</p>
-          <div className="link">
-            <a href="https://www.linkedin.com/in/marcelo-diego-albano-6a453022b" target='_blank'>Acceder mi LinkedIN</a>
-          </div>
-
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores repellendus necessitatibus recusandae in? Suscipit explicabo sequi accusantium nemo repudiandae, dicta voluptatum totam iste commodi ad quasi, incidunt rerum ex laudantium.</p>         
+            <a href="https://www.linkedin.com/in/marcelo-diego-albano-6a453022b" target='_blank'><div className="link">Acceder mi LinkedIN</div></a>
         </div>
       </div>
       <div className="card">
@@ -58,10 +59,8 @@ function AboutUs() {
         </div>
         <div className="face back">
           <h3>Nahuel Kubin</h3>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores repellendus necessitatibus recusandae in? Suscipit explicabo sequi accusantium nemo repudiandae, dicta voluptatum totam iste commodi ad quasi, incidunt rerum ex laudantium.</p>
-          <div className="link">
-            <a href="https://www.linkedin.com/in/rodolfo-nahuel-kubin-346b69253/"target='_blank'>Acceder mi LinkedIN</a>
-          </div>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores repellendus necessitatibus recusandae in? Suscipit explicabo sequi accusantium nemo repudiandae, dicta voluptatum totam iste commodi ad quasi, incidunt rerum ex laudantium.</p>         
+            <a href="https://www.linkedin.com/in/rodolfo-nahuel-kubin-346b69253/"target='_blank'><div className="link">Acceder mi LinkedIN</div></a>          
         </div>
       </div>
     </div>
