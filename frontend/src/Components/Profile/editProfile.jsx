@@ -81,8 +81,8 @@ const EditProfile = () => {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
-        navigate("/");
         window.location.reload(false);
+        navigate('/profile');
       })
       .catch((err) => console.log(err));
   };
@@ -162,7 +162,7 @@ const EditProfile = () => {
                 ></textarea>
               </div>
               <div className="button">
-                <Link to="/profile"><button type="submit">Editar</button></Link>
+                <button type="submit">Editar</button>
               </div>
             </div>
           </form>
