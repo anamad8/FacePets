@@ -4,11 +4,12 @@
     box-sizing: border-box; 
 }
 
-.container span{
-    
-    flex-wrap: wrap;
-   
-   
+.aboutus p{
+margin-top: 5px;
+margin-bottom: 0px;
+text-align: center;
+font-size: 25px;
+text-decoration: underline;
 
 }
 
@@ -17,16 +18,14 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
-    /* background-color: rgba(12, 136, 173, 0.377); */
-    background: -webkit-linear-gradient(#09789960, #0a0011);
+    min-height: 75vh;
 }
 
 .card{
     position: relative;
     width: 300px;
     height: 350px;
-    margin: 10px;
+    margin: 5px;
 }
 
 .card .face{
@@ -39,6 +38,7 @@
     transition: .5s ;
 
 }
+
 .card .front{
     transform: perspective(600px) rotateY(0deg);
     box-shadow: 0, 5px, 10px #000;
@@ -50,7 +50,6 @@
     height: 100%;
     object-fit: cover;
 }
-
 .card .front h3{
     position: absolute;
     bottom: 0;
@@ -61,45 +60,40 @@
     background-color: rgba(0, 0, 0, 0.719);
     text-align: center;
 }
-
 .card .back{
     transform: perspective(600px) rotateY(180deg);
-    background: rgba(20, 20, 20, 0.534);
+    background: rgba(210, 224, 4, 0.863);
     padding: 15px;
     color: #ffffff;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     text-align: center;
-    box-shadow: 0 80px 100px rgb(68, 68, 68);
+    box-shadow: 0 80px 100px rgba(110, 110, 110, 0.719);
 }
-
 .card .back .link{
+    margin: 3px;
     border-radius: 10px;
     border-top: solid 1px #f3f3f3;
     height: 50px;
     line-height: 50px;
-    background: -webkit-linear-gradient(#095c5f94, #000000);
+    background: -webkit-linear-gradient(#031a1bc4, #000000);
     border-color: #000000;
 }
 .card .back .link:hover{
-    transform: scale(1.05);
+    transform: scale(1.10);
 }
 
 .card .back .link a{
     color: #f3f3f3
-
 }
-
 .card .back h3{
     font-size: 30px;
     margin-top: 20px;
     letter-spacing: 2px;
 }
-
 .card .back p{
     letter-spacing: 1px;
-
 }
 
 .card:hover .front{
@@ -108,3 +102,4 @@
 .card:hover .back{
     transform: perspective(600px) rotateY(360deg);
 }
+
