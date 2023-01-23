@@ -32,6 +32,7 @@ function App() {
       <header>
         <HeaderLogin />
       </header>
+      <SideBar />
       <Routes>
         <Route element={<ProtectedRoute user={user}/>}>
 
@@ -46,7 +47,7 @@ function App() {
         <Route exact path="/register" element={<Register/>} />
 
       </Routes>
-      <SideBar />
+      
     </>
   );
 }

@@ -1,6 +1,8 @@
 .flexContainer {
   display: flex;
   justify-content: center;
+  min-width: 360px;
+margin-left: 10px;
 }
 .flexContainer .containerProfile {
   margin-top: 5vh;
@@ -13,14 +15,16 @@
   box-shadow: 1px 1px 5px rgb(138, 137, 137);
   font-family: "Times New Roman", Times, serif;
   color: white;
+  min-width: 260px;
 }
 .flexContainer .containerProfile .profileImg {
   border-radius: 10px;
-  padding: 5px;
+  
   border-bottom: solid;
   height: 15rem;
   text-align: center;
   background-size: cover;
+  
 }
 .flexContainer .containerProfile .profileImg a {
   text-decoration: none;
@@ -29,6 +33,7 @@
   float: right;
   font-size: 20px;
   text-decoration: none;
+  color: aqua;
 }
 .flexContainer .containerProfile .profileImg .icon:hover {
   transition: all 0.3s;
@@ -36,9 +41,9 @@
   cursor: pointer;
 }
 .flexContainer .containerProfile .profileImg img {
-  width: 250px;
+  min-width: 200px;
   border-radius: 50%;
-  height: 15rem;
+  height: 13rem;
   box-shadow: 1px 1px 20px gray;
 }
 .flexContainer .containerProfile .profileData {
