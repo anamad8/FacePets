@@ -3,9 +3,11 @@
   justify-content: center;
 }
 .flexContainer .containerProfile {
+  margin-top: 5vh;
   border-radius: 10px;
   width: 60%;
-  background-color: #03b5bb transparent;
+  background-color: rgba(3, 80, 67, 0.151);
+  /* background-color: #03b5bb transparent; */
   height: max-content;
   padding: 20px;
   box-shadow: 1px 1px 5px rgb(138, 137, 137);

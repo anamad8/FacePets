@@ -62,7 +62,7 @@
 #sidemenu #profile #photo {
   font-size: 24px;
   overflow: hidden;
-  padding: var(--padding);
+  /* padding: var(--padding); */
   margin: 0 auto;
 }
 #sidemenu #profile #photo img {

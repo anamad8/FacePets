@@ -114,7 +114,8 @@
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         justify-items: end;
-        background-color: #3fcda9;
+        /* background-color: #3fcda9; */
+        background-color: rgba(3, 80, 67, 0.884);
         border-radius: 10% 0 0 100% ;
         -webkit-border-radius: 10% 0 0 100% ;
         -moz-border-radius: 10% 0 0 100% ;
