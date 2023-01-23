@@ -3,11 +3,21 @@ import './Register.css';
 import MovingBanner from '../MovingBanner/MovingBanner';
 import { Link } from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 function Register() {
 
     const history = useNavigate()
-
+    const notify = (error) => toast(error, {
+        position: "bottom-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        });
     const [input, setInputs] = useState({
         name:'',
         petName:'',        
@@ -22,6 +32,7 @@ function Register() {
 
     const[errors, setErrors] = useState({});
     const [stateSelect, setStateSelect] = useState(input.gender);
+    
 
     const handleChange = (e) => {
         if(e.target.name === 'image'){
@@ -47,38 +58,55 @@ function Register() {
 
         if(datos.name.length < 3){
             errors.name = '*Minimo 3 letras negraso';
+            
         }
 
         if(datos.petName.length < 3){
             errors.petName = '*Minimo 3 letras padre';
+            
+
         }
 
         if(!datos.breed){
             errors.breed = '*Se requiere la raza';
+            
+
         }
 
         if(!datos.description){
             errors.description = '*Se requiere una descripción';
+            
+
         }
         
         if(!datos.image){
             errors.image = '*Se requiere una imagen de perfil';
+            
+        
         }
 
         if(!datos.gender){
             errors.gender = '*Se requiere el género';
+            
+
         }
 
         if(!datos.petAge){
             errors.petAge = '*Se requiere la edad de la mascota';
+           
+
         }
 
         if(!datos.email){
             errors.email = '*Se requiere el email';
+            
+
         }
 
         if(datos.password.length < 5){
             errors.password = '*Se requiere la password que sea mayor a 8 caracteres';
+            
+
         }
         
         return errors;
@@ -104,7 +132,6 @@ function Register() {
 
         setErrors(err)
 
-
         if(Object.keys(err).length === 0){
             fetch('http://localhost:3030/user',{
                 method:'POST',
@@ -118,6 +145,9 @@ function Register() {
                 }
                 )
             .catch((err) => console.log(err))
+        }else{
+       notify("Ocurrio un error en la carga de datos")
+
         }}
 
 
@@ -187,9 +217,9 @@ function Register() {
                         </form>
 
                     </div>
+                    <ToastContainer />
 
                 <MovingBanner />
-
                 </div>
         </>
     )

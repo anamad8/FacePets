@@ -27,6 +27,12 @@ export function SideBar(){
         return(
         <></>)
     }
+    let styles={
+        backgroundImage: "url(" + datas.imageBanner + ")",
+        backgroundPosition: 'center',
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat'
+      }
     return(
         <>
          
@@ -38,7 +44,7 @@ export function SideBar(){
                     <div className="btn-hamburger"></div>
                     <div className="btn-hamburger"></div>
                 </div>
-                <div id="profile">
+                <div id="profile" style={styles}>
                  <div id="photo"><img src={datas.image}/></div> 
                      
                    <></>

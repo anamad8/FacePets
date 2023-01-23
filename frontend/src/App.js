@@ -36,7 +36,7 @@ function App() {
       <Routes>
         <Route element={<ProtectedRoute user={user}/>}>
 
-          <Route path="/home" element={<Home/>}/>
+          <Route path="/" element={<Home/>}/>
           <Route path="/profile" element={<Profile/>} />
           <Route path="/AboutUs" element={<AboutUs/>} />
           <Route path="/editprofile" element={<EditProfile/>} /> 
