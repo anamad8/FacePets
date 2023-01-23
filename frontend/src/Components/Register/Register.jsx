@@ -126,7 +126,7 @@ function Register() {
         <>
             <div className='register'>
                     <div className='register-from'>
-                        <form  className='' action="" onSubmit= {handleSubmit}>
+                        <form  action="" onSubmit= {handleSubmit}>
 
                             <label htmlFor="name">Nombre del usuario</label> 
                             <input type="text" placeholder='Ingrese tu nombre' name="name" 

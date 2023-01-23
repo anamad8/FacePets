@@ -78,7 +78,7 @@ function Login() {
             <h1>Bienvenido!!!</h1>
                 <div className='login'>
                     <div className='login-from'>
-                        <form  className='' action="" onSubmit= {(e) => handleSubmit(e)}>
+                        <form  action="" onSubmit= {(e) => handleSubmit(e)}>
                             <input type="email" placeholder='escribe tu email' name="email"
                                 onChange={(e) => handleChange(e)} /> 
 
