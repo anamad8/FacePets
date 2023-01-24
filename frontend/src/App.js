@@ -13,6 +13,8 @@ import './CSS/style.css';
 import AboutUs from "./Components/AboutUs/AboutUs";
 
 
+
+
 function App() {
 
   const { user, login, logout, setUser, setDarkMode, darkMode } = useContext(DataContext)
@@ -36,22 +38,21 @@ function App() {
       <Routes>
         <Route element={<ProtectedRoute user={user}/>}>
 
-          <Route path="/" element={<Home/>}/>
+          <Route path="/Home" element={<Home/>}/>
           <Route path="/profile" element={<Profile/>} />
           <Route path="/AboutUs" element={<AboutUs/>} />
           <Route path="/editprofile" element={<EditProfile/>} /> 
           
         </Route>
-
+        
         <Route exact path="/login"  element={<Login/>}/>
         <Route exact path="/register" element={<Register/>} />
 
       </Routes>
-      
+      <></>
     </>
   );
 }
-
 export default App;
 
 // comentario de prueba

@@ -52,6 +52,14 @@ export function SideBar(){
                 <div id="menuItems">
                     
                <div className="item">
+               <Link to="/Home">
+                        <a href="#">
+                             <BiHomeAlt className="icon" />
+                            <div className="title">
+                                <span>INICIO</span>
+                                </div>
+                        </a>
+                        </Link>
                 <Link to="/profile">
                         <a href="#">
                              <BiHomeAlt className="icon" />

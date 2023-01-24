@@ -1,0 +1,72 @@
+.rightBar{
+    flex: 3;
+    position: sticky;
+    top: 70px;
+    overflow: scroll;
+
+    &::-webkit-scrollbar{
+        display: none;
+    }
+
+    .container{
+        margin: 20px;
+        padding: 15px;
+        background-color: rgba(2, 197, 165, 0.747);
+        border-radius: 5%;        
+
+        .item {
+        
+            span{
+                color: rgb(7, 7, 7)
+            }
+            
+            .user{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin: 20px 0px;
+
+                .userInfo{
+                    display: flex;
+                    align-items: center;
+                    gap: 20px;
+
+                 img{
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                 }
+
+                 span{
+                    
+                    font-weight: 500;
+                    color: black;
+                 }
+
+                }
+
+                .buttons{
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+
+                button{
+                        
+                        border:none;
+                        padding: 5px;
+                        color: rgba(7, 7, 7, 0.5);
+                        cursor: pointer;
+
+                        &:first-child{
+                            background-color: #069e34;
+                        }
+                        &:last-child{
+                            background-color: #f0443e;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

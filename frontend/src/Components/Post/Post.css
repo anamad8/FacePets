@@ -1,0 +1,32 @@
+.post {
+  background-color: rgba(2, 197, 165, 0.61);
+}
+.post .container {
+  padding: 20px;
+}
+.post .container .user {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.post .container .user .userInfo {
+  display: flex;
+  gap: 20px;
+}
+.post .container .user .userInfo img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.post .container .user .userInfo .details {
+  display: flex;
+  flex-direction: column;
+}
+.post .container .user .userInfo .details .name {
+  font-weight: 500;
+}
+.post .container .user .userInfo .details .date {
+  font-size: 12px;
+}/*# sourceMappingURL=Post.css.map */
