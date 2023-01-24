@@ -4,6 +4,7 @@ import { useNavigate, Link } from "react-router-dom";
 import { useDataContext} from "../../Context/DataContext";
 import './editProfile.css'
 
+
 const EditProfile = () => {
   const { datas, user } = useDataContext();
   const navigate = useNavigate(0);

@@ -9,6 +9,9 @@ server.use("/user", require("./routes/user.routes"));
 server.use("/uploads", express.static("uploads"));
 server.use("/post", require("./routes/post.routes"));
 server.use("/comment", require("./routes/comment.routes"));
+server.use("/like", require("./routes/likes.routes"));
+server.use("/email", require("./routes/email.route"));
+
 
 
 server.get("/", function (req, res) {

@@ -4,6 +4,8 @@ import './Login.css';
 import {useNavigate} from "react-router-dom";
 import { useDataContext } from '../../Context/DataContext';
 import MovingBanner from '../MovingBanner/MovingBanner';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 function Login() {
@@ -11,7 +13,16 @@ function Login() {
     const history = useNavigate()
 
     const { login } = useDataContext();
-
+    const notify = (error) => toast(error, {
+        position: "bottom-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        });
     const [inputs, setInputs] = useState({
         
         email:"",
@@ -57,6 +68,10 @@ function Login() {
             if(Object.keys(err).length === 0){
             res.json()          
             .then(data => {
+              console.log(data)
+              if(data.message){
+                notify(data.message)
+              }
             localStorage.setItem('user', JSON.stringify(data.user));
             localStorage.setItem('token', data.tokenAccess);
             let logged = data.user.id;
@@ -66,7 +81,8 @@ function Login() {
             }})
           .catch((err) => {
             console.log(err)
-            history("/Login");
+           
+            
           })        
             
           }
@@ -99,7 +115,7 @@ function Login() {
                     </div>
 
                     <MovingBanner />
-
+<ToastContainer/>
                 </div>
         </>
     )
