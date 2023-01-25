@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React, { useState,useContext } from "react";
 
 import {BiHomeAlt , BiShapePolygon} from "react-icons/bi";
 import { Link } from "react-router-dom";
-import { useDataContext } from "../../Context/DataContext";
+import {DataContext} from "../../Context/DataContext";
 import './sideBar.css';
 
 
@@ -10,7 +10,7 @@ import './sideBar.css';
 
 export function SideBar(){
 
-    const {datas, user} = useDataContext()
+    const {datas, user} =  useContext(DataContext)
     const [state, setState]= useState("menuCollapsed")
     const cambiar=()=>{
         if(state == "menuCollapsed"){
@@ -23,7 +23,7 @@ export function SideBar(){
             
         }
     }
-    if(!user){
+    if(!localStorage.getItem("user")){
         return(
         <></>)
     }

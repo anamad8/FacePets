@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react"
+import React, { useEffect, useState,useContext } from "react"
 import { BsPencil, BsGenderFemale, BsGenderMale } from "react-icons/bs"
 import { Link } from "react-router-dom"
-import { useDataContext } from "../../Context/DataContext"
+import { DataContext } from "../../Context/DataContext"
 import './profile.css'
 
 
@@ -9,7 +9,7 @@ const Perfil=()=>{
 
 
 
-const {datas} = useDataContext()
+const {datas} = useContext(DataContext)
 
 let styles={
     backgroundImage: "url(" + datas.imageBanner + ")",

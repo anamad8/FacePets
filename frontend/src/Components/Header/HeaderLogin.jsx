@@ -1,7 +1,7 @@
 import React,{useContext, useState} from 'react';
 import './HeaderLogin.css';
 import Header from './Header';
-import { DataContext, useDataContext } from '../../Context/DataContext';
+import { DataContext} from '../../Context/DataContext';
 import { Link } from "react-router-dom"
 import DarkMode from '../DarkMode/DarkMode';
 import { BiUserCircle } from "react-icons/bi";
@@ -16,9 +16,9 @@ import {useNavigate} from "react-router-dom";
 
 function HeaderLogin() {
 
-    const { user, setUser } = useContext(DataContext);
+    const { user, setUser,datas } = useContext(DataContext)
 
-    const { datas } = useDataContext();
+    console.log(user)
 
     const [btnMenu, setBtnMenu] = useState(false);
 
@@ -34,10 +34,11 @@ function HeaderLogin() {
         history("/login");
     }
 
+    
     return (
         <>
             {
-                user ? (
+                localStorage.getItem("user") ? (
 
                 <div className='headerLogin'>
                     <div className='img-logo'>

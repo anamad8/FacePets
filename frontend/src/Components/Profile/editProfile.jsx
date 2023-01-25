@@ -1,11 +1,11 @@
 import { render } from "@testing-library/react";
-import React, { useState } from "react";
+import React, { useState,useContext } from "react";
 import { useNavigate, Link } from "react-router-dom";
-import { useDataContext} from "../../Context/DataContext";
+import { DataContext} from "../../Context/DataContext";
 import './editProfile.css'
 
 const EditProfile = () => {
-  const { datas, user } = useDataContext();
+  const { datas, user } = useContext(DataContext)
   const navigate = useNavigate(0);
   const [state, setState] = useState({
     name: "",

@@ -15,26 +15,18 @@ import AboutUs from "./Components/AboutUs/AboutUs";
 
 function App() {
 
-  const { user, login, logout, setUser, setDarkMode, darkMode } = useContext(DataContext)
-
-  useEffect(() => {
-    const userLogged = JSON.parse(localStorage.getItem('user'));
-    if(!userLogged){
-      setUser(null);
-    } else{
-      setUser(userLogged);
-    }
-  }, [])
-
-  console.log(user)
   return (
     <>
-      <header>
-        <HeaderLogin />
-      </header>
+      
+      <HeaderLogin />
+      
       <SideBar />
       <Routes>
-        <Route element={<ProtectedRoute user={user}/>}>
+
+        <Route exact path="/login"  element={<Login/>}/>
+        <Route exact path="/register" element={<Register/>} />
+
+        <Route element={<ProtectedRoute />}>
 
           <Route path="/" element={<Home/>}/>
           <Route path="/profile" element={<Profile/>} />
@@ -42,9 +34,6 @@ function App() {
           <Route path="/editprofile" element={<EditProfile/>} /> 
           
         </Route>
-
-        <Route exact path="/login"  element={<Login/>}/>
-        <Route exact path="/register" element={<Register/>} />
 
       </Routes>
       

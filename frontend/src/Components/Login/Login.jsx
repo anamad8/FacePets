@@ -1,17 +1,18 @@
-import React, {useState} from 'react';
+import React, {useState, useContext} from 'react';
 import { Link } from 'react-router-dom';
 import './Login.css';
 import {useNavigate} from "react-router-dom";
-import { useDataContext } from '../../Context/DataContext';
+import { DataContext } from '../../Context/DataContext';
 import MovingBanner from '../MovingBanner/MovingBanner';
+import HeaderLogin from '../Header/HeaderLogin';
 
 
 function Login() {
 
     const history = useNavigate()
 
-    const { login } = useDataContext();
-
+    const { login, setUser} = useContext(DataContext)
+    
     const [inputs, setInputs] = useState({
         
         email:"",
@@ -53,25 +54,31 @@ function Login() {
             method:'POST',
             headers:{'Content-Type': 'application/json'},
             body:JSON.stringify(inputs)
-          }).then((res) => {
+        }).then((res) => {
             if(Object.keys(err).length === 0){
             res.json()          
             .then(data => {
-            localStorage.setItem('user', JSON.stringify(data.user));
+            localStorage.setItem('user', JSON.stringify(data.user))
             localStorage.setItem('token', data.tokenAccess);
-            let logged = data.user.id;
+            // localStorage.getItem("user")
+
+            let logged = data.user;
+            // setUser(logged)
             login(logged);
-            history("/home");
+            history("/");
+
             })
-            }})
-          .catch((err) => {
+        }})
+        .catch((err) => {
             console.log(err)
             history("/Login");
-          })        
-            
-          }
-   
+        })        
+
+        
+    }
+
     
+
     return (
 
         <>
