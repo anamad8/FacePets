@@ -5,7 +5,7 @@ import { useDataContext } from "../../Context/DataContext"
 import './profile.css'
 
 
-const Perfil=()=>{
+const Profile=()=>{
 
 
 
@@ -42,4 +42,4 @@ return(
 )
 }
 
-export default Perfil
+export default Profile
