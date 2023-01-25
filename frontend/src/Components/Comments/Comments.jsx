@@ -1,14 +1,8 @@
 import React from 'react'
 import './Comments.css';
 
-
-
 function Comments() {
     
-    
-   
-
-
     //Comentarios temporales, armado de front para luego conexion con el back
 
 

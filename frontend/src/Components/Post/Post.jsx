@@ -19,6 +19,8 @@ function Post({post}) {
 
   const liked = false;
 
+
+  
   return (
     <div className='post'>
       <div className="container">  
