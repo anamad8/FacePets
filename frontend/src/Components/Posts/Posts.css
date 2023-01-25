@@ -1,5 +1,8 @@
 .posts {
   display: flex;
+  margin-top: 4vh;
+  margin-left: 20vh;
+  margin-right: 20vh;
   flex-direction: column;
   gap: 50px;
 }/*# sourceMappingURL=Posts.css.map */
