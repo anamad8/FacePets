@@ -1,5 +1,7 @@
 import React,{useContext, useState} from 'react';
 import './HeaderLogin.css';
+import Form from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button';
 import Header from './Header';
 import { DataContext, useDataContext } from '../../Context/DataContext';
 import { Link } from "react-router-dom"
@@ -19,6 +21,8 @@ function HeaderLogin() {
     const { user, setUser } = useContext(DataContext);
 
     const { datas } = useDataContext();
+    
+    const [filter, setFilter] = useState("")
 
     const [btnMenu, setBtnMenu] = useState(false);
 
@@ -43,11 +47,21 @@ function HeaderLogin() {
                     <div className='img-logo'>
                     <Link to="/home"><img src={imgLogo} alt="" className='img-logo' /></Link>
                     </div>
-                    <div className={`input ${btnMenu ? 'activar' : '' } `}>
-                        <AiOutlineSearch className='search'/>
-                        <input type="text" />
+
+                    <Form className="SearchBar">
+                        <Form.Control
+                        type="search"
+                        placeholder="Search"
+                        className="me-2"
+                        aria-label="Search"
+                        onChange={(e) =>{
+                            setFilter(e.target.value);
+                        }}
+                        />
+                        <Link to={"/Search/" + filter}><Button variant="info">Search</Button></Link>
+                    </Form>
                         
-                    </div>
+
                     <div  className={`links ${btnMenu ? 'activar' : '' } `}>
                         <div className='darMode'>
                             <DarkMode/>
