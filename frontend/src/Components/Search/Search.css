@@ -1,0 +1,63 @@
+.caja .cards .card .text {
+    padding: 0 20px 20px;
+  }
+
+  .caja {
+    display: flex;
+    justify-content: center;
+    color: black;
+    height: auto;
+    width: 100vw;
+    margin: 5px;
+  }
+  .caja .cardsUnique {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 30%;
+    background-color: #ffffff;
+    border-radius: 10%;
+    margin-bottom: 50px;
+  }
+  .caja .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 60%;
+    background-color: #ffffff;
+    opacity: 0.9;
+    border-radius: 1%;
+  }
+  .caja .cards .card {
+    flex: 0 0 200px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+    opacity: 1 !important;
+  }
+  .caja .cards .card .imageProduct {
+    max-width: 100%;
+    -webkit-transition: 0.4s ease;
+    transition: 0.4s ease;
+  }
+  .caja .cards .card .imageProduct:hover {
+    -webkit-transform: scale(1.03);
+    transform: scale(1.03);
+  }
+  .caja .cards .card .text {
+    padding: 0 20px 20px;
+  }
+
+  .caja .cards .card .imageProduct {
+    max-width: 100%;
+    -webkit-transition: 0.4s ease;
+    transition: 0.4s ease;
+  }
+  .caja .cards .card .imageProduct:hover {
+    -webkit-transform: scale(1.03);
+    transform: scale(1.03);
+  }
+  .ProductInfo .imageProduct {
+    width: 20vw;
+    height: 20vw;
+  }
