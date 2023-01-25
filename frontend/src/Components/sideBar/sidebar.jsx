@@ -23,16 +23,17 @@ export function SideBar(){
             
         }
     }
-    if(!user){
-        return(
-        <></>)
-    }
+    
     let styles={
         backgroundImage: "url(" + datas.imageBanner + ")",
         backgroundPosition: 'center',
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat'
       }
+      if(!user){
+        return(
+        <></>)
+    }
     return(
         <>
          
