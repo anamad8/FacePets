@@ -4,6 +4,6 @@ const { EmailSender} = require('../controller/email.controller')
 
 
 
-router.post('/', EmailSender)
+router.post('/:email', EmailSender)
 
 module.exports = router;

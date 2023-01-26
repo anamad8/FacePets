@@ -1,7 +1,8 @@
 const nodemailer = require("nodemailer");
 const EmailSender = async (req, res) => {
    
-    email: req.params.email
+   const {email}= req.params
+   var Text = `http://localhost:3000/newPassword/${email}`
     let transporter = nodemailer.createTransport({
       host: "smtp-relay.sendinblue.com",
       port: 587,
@@ -14,11 +15,10 @@ const EmailSender = async (req, res) => {
   
     
     let info = await transporter.sendMail({
-      from: '"Fred Foo 👻" <foo@example.com>',
+      from: '"Facepets 👻" <facePets@gmail.com>',
       to: email, 
-      subject: "Hello ✔", 
-      text: "Hello world?", 
-      html: "<b>Hello world?</b>", 
+      subject: "Confirmacion de Correo Electronico", 
+      html: `<h1>Debes Aplicar este link para poder restablecer tu contraseña <a href="${Text}">${Text}</a></h1>`, 
     });
   
     console.log("Message sent: %s", info.messageId);

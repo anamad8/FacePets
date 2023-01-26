@@ -4,6 +4,7 @@ const User = db.user
 
 const jwt = require("jsonwebtoken");
 const bcryptjs = require("bcryptjs");
+const bcrypt= require('bcrypt')
 require("dotenv").config();
 
 const generateAccessToken = (user) => {
@@ -30,6 +31,25 @@ const getByidUser = async (req, res) => {
       where: { id: id },
     })
       .then((data) => {
+        const res = { error: false, data: data };
+        return res;
+      })
+      .catch((error) => {
+        const res = { error: true, message: error };
+        return res;
+      });
+    res.json(response);
+  } catch (e) {
+    console.log(e);
+  }
+};
+const getByEmailUser = async (req, res) => {
+  try {
+    const { email } = req.params;
+    const response = await User.findAll({
+      where: { email: email },
+    })
+      .then(data => {
         const res = { error: false, data: data };
         return res;
       })
@@ -106,6 +126,29 @@ const updateUser = async (req, res) => {
         res.json(result);
       });
     }
+  } catch (e) {
+    console.log(e);
+  }
+};
+
+const updateUserByemail = async (req, res) => {
+  try {
+    const salt = await bcrypt.genSaltSync(10);
+   const Password =await  req.body.password
+  let passwordHash = await bcrypt.hash(Password,salt)
+      User.update(
+        {
+          password:passwordHash
+          },
+        {
+          where: {
+            email: req.params.email,
+          },
+        }
+      ).then((data) => {
+        res.json(data);
+      });
+    
   } catch (e) {
     console.log(e);
   }
@@ -201,12 +244,14 @@ const getUserPost = async (req, res) => {
 };
 
 module.exports = {
+  getByEmailUser,
   createUser,
   getUser,
   login,
   updateUser,
   getByidUser,
  getUserPost,
- updateBanner
+ updateBanner,
+ updateUserByemail
 };
 
