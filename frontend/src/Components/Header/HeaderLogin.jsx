@@ -13,6 +13,8 @@ import imgLogo from '../Img/Pet-logo-Transparent.png'
 import BtnBurguer from '../BtnBurguer/BtnBurguer';
 import { AiOutlineSearch } from "react-icons/ai";
 import {useNavigate} from "react-router-dom";
+import {FaSistrix} from "react-icons/fa";
+
 
 
 
@@ -58,7 +60,12 @@ function HeaderLogin() {
                             setFilter(e.target.value);
                         }}
                         />
-                        <Link to={"/Search/" + filter}><Button variant="info">Search</Button></Link>
+                        <Link to={"/Search/" + filter}><FaSistrix style={{
+                    fontSize: "20px",
+                     marginLeft: "7px",
+                     textDecoration: "none",
+                     color: "black"      
+                        }}/></Link>
                     </Form>
                         
 
@@ -66,14 +73,9 @@ function HeaderLogin() {
                         <div className='darMode'>
                             <DarkMode/>
                         </div>
-                        <div className='icon' >            
-                            <Link to="/profile"><BiUserCircle/></Link>
-                            <FaEnvelope />
-                            <CiBellOn />
-                        </div>
+                       
                         <div className='headerUser'>
                             <img src={datas.image} />
-                            <p>{datas.petName} </p>
                         </div>
                         <CiLogin className='CiLogin' onClick={logOutRedirect}/>
                         
