@@ -9,8 +9,7 @@
 }
 
 #sidemenu {
-  /* background-color: rgba(2, 197, 165, 0.5); */
-  background-color: rgba(3, 80, 67, 0.788);
+  background-color: rgba(2, 197, 165, 0.5);
   z-index: 2;
   color: white;
   position: fixed;
@@ -18,7 +17,7 @@
   left: 0;
   border-top-right-radius: 7px;
   border-bottom-right-radius: 7px;
-  box-shadow: 1px 10px 10px rgb(48, 47, 47);
+  box-shadow: 1px 1px 4px rgb(145, 145, 145);
 }
 #sidemenu a {
   color: white;
@@ -61,7 +60,7 @@
 #sidemenu #profile #photo {
   font-size: 24px;
   overflow: hidden;
-  /* padding: var(--padding); */
+  padding: var(--padding);
   margin: 0 auto;
 }
 #sidemenu #profile #photo img {
@@ -144,6 +143,4 @@
 }
 .menuCollapsed #item {
   width: 100px;
-}
-
-/*# sourceMappingURL=sideBar.css.map */
+}/*# sourceMappingURL=sideBar.css.map */

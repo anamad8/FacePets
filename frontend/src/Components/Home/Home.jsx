@@ -1,15 +1,18 @@
-import React from 'react';
-// import { useDataContext } from '../../Context/DataContext';
-
+import React from 'react'
+import Posts from '../Posts/Posts'
 function Home() {
-
-    // const { datas } = useDataContext();
-
-    return (
+  return (
+    <div>
         <>
-
+        <div style={{ display: "flex"}}>
+        <div style={{flex: 6 }}>
+        <Posts></Posts>
+        </div>
+        </div>
         </>
-    )
+      
+    </div>
+  )
 }
 
 export default Home

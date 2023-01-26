@@ -30,7 +30,8 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
   border-radius: 10px;
   overflow: hidden;
   transition: 0.5s;
@@ -43,7 +44,8 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .card .front h3 {
   position: absolute;
@@ -94,6 +96,4 @@
 }
 .card:hover .back {
   transform: perspective(600px) rotateY(360deg);
-}
-
-/*# sourceMappingURL=AboutUsCards.css.map */
+}/*# sourceMappingURL=AboutUsCards.css.map */

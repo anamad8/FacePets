@@ -1,0 +1,55 @@
+.post {
+  background-color: rgba(2, 197, 165, 0.61);
+}
+.post .container {
+  margin-right: 10px;
+  padding: 40px;
+}
+.post .container .user {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.post .container .user .userInfo {
+  display: flex;
+  gap: 20px;
+}
+.post .container .user .userInfo img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.post .container .user .userInfo .details {
+  display: flex;
+  flex-direction: column;
+}
+.post .container .user .userInfo .details .name {
+  font-weight: 500;
+}
+.post .container .user .userInfo .details .date {
+  font-size: 12px;
+}
+.post .container .content {
+  margin: 10px 0px;
+}
+.post .container .content img {
+  width: 100%;
+  height: 400px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin: 20px;
+}
+.post .container .info {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.post .container .info .item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  font-size: 14px;
+}/*# sourceMappingURL=Post.css.map */
