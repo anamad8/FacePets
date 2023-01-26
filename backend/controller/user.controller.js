@@ -138,7 +138,7 @@ const updateUserByemail = async (req, res) => {
   let passwordHash = await bcrypt.hash(Password,salt)
       User.update(
         {
-          password:passwordHash
+          password: passwordHash
           },
         {
           where: {
@@ -147,6 +147,8 @@ const updateUserByemail = async (req, res) => {
         }
       ).then((data) => {
         res.json(data);
+      }).catch((e)=>{
+        console.log(e)
       });
     
   } catch (e) {

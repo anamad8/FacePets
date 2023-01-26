@@ -52,23 +52,26 @@ const ResetPassword = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const err = validate(inputs);
-   
-    let Password = inputs.password
 
+    const Password = {
+      password: inputs.password
+    }
     setErrors(err);
     
     if (Object.keys(err).length === 0) {
-      fetch(`http://localhost:3030/user/email/`+ email, {
+      fetch(`http://localhost:3030/user/email/${email}`, {
         method: "PATCH",
         headers: {
             'Content-Type': 'application/json'
           },
         body: JSON.stringify(Password)
+        
       })
         .then((res) => {
           res.json();
         })
-        .then((data) => {
+        .then(data => {
+          console.log(Password)
           console.log(data);
           console.log(1);
         })
