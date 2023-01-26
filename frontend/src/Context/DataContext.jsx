@@ -11,16 +11,28 @@ export const DataProvider = ({children}) => {
 
 
     const [user,setUser] = useState()
+    const [userLogin,setUserLogin] = useState()
     const [darkMode, setDarkMode] = useState(false)
     const [datas, setData] = useState({});
 
+    console.log("userLogin",userLogin)
+    console.log("user",user)
+
+    useEffect(() => {
+        const userLoggedJSON = window.localStorage.getItem('user');
+        if(userLoggedJSON){
+          const user = JSON.parse(userLoggedJSON);
+          setUser(user)
+        }
+      }, [])
+      
     useEffect(() => {
         if(user){
         fetch("http://localhost:3030/user/" + user.id)
           .then((res) => res.json())
           .then((data) => {
-            console.log(data);
-            console.log(data.data[0].name);
+            // console.log(data);
+            // console.log(data.data[0].name);
             setData({
               id: data.data[0].id,
               name: data.data[0].name,
@@ -76,7 +88,7 @@ export const DataProvider = ({children}) => {
 
 
     return(
-        <DataContext.Provider value={{user, datas, login, logout, darkMode, setDarkMode, handlePosition, setUser}}>
+        <DataContext.Provider value={{user, datas, login, logout, darkMode, setDarkMode, handlePosition, setUser,userLogin,setUserLogin}}>
             {children}
         </DataContext.Provider>
     )

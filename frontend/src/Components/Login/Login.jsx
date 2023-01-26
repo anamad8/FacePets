@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import './Login.css';
 import {useNavigate} from "react-router-dom";
@@ -12,7 +12,7 @@ function Login() {
 
     const history = useNavigate()
 
-    const { login } = useDataContext();
+    const { login, setUser } = useDataContext();
     const notify = (error) => toast(error, {
         position: "bottom-right",
         autoClose: 5000,
@@ -51,7 +51,7 @@ function Login() {
         return errors;
         
     } 
-
+    
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -72,8 +72,8 @@ function Login() {
               if(data.message){
                 notify(data.message)
               }
-            localStorage.setItem('user', JSON.stringify(data.user));
-            localStorage.setItem('token', data.tokenAccess);
+            window.localStorage.setItem('user', JSON.stringify(data.user));
+            window.localStorage.setItem('token', data.tokenAccess);
             let logged = data.user.id;
             login(logged);
             history("/home");
