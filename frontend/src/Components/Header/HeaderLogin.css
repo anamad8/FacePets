@@ -46,6 +46,11 @@
     -o-border-radius: 15px;
 }
 
+.headerLogin  input::placeholder{
+    font-size: 12px;
+    font-weight:500;
+}
+
 .headerLogin .icon{
     display: flex;
     justify-content: space-between;
@@ -80,6 +85,19 @@
     opacity: 0.5;
 }
 
+.headerLogin .SearchBar button{
+    padding: 10px;
+    margin-left: 3px;
+    background-color: #044d0b62;
+    color: #fff;
+    cursor: pointer;
+    border: 1px solid #000;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
 
 @media (min-width: 867px) {
     .headerLogin .btnBurguer{

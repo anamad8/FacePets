@@ -11,9 +11,9 @@ function DarkMode() {
         <div className='dark-mode'>
             {
                 darkMode === true ? 
-                <button id="btn-darkMode" className='oscuro' onClick={handlePosition}><span class="toggle--label-background-oscuro"></span></button> 
+                <button id="btn-darkMode" className='oscuro' onClick={handlePosition}><span className="toggle--label-background-oscuro"></span></button> 
                 :
-                <button id="btn-darkMode" className='claro' onClick={handlePosition}><span class="toggle--label-background-claro"></span></button>
+                <button id="btn-darkMode" className='claro' onClick={handlePosition}><span className="toggle--label-background-claro"></span></button>
             }
         </div>
     )

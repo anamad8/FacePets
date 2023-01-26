@@ -13,7 +13,7 @@ import imgLogo from '../Img/Pet-logo-Transparent.png'
 import BtnBurguer from '../BtnBurguer/BtnBurguer';
 import { AiOutlineSearch } from "react-icons/ai";
 import {useNavigate} from "react-router-dom";
-
+import { BsSearch } from "react-icons/bs";
 
 
 function HeaderLogin() {
@@ -51,14 +51,14 @@ function HeaderLogin() {
                     <Form className="SearchBar">
                         <Form.Control
                         type="search"
-                        placeholder="Search"
+                        placeholder="Busca nombres de mascotas"
                         className="me-2"
                         aria-label="Search"
                         onChange={(e) =>{
                             setFilter(e.target.value);
                         }}
                         />
-                        <Link to={"/Search/" + filter}><Button variant="info">Search</Button></Link>
+                        <Link to={"/Search/" + filter}><Button variant="info"><BsSearch/></Button></Link>
                     </Form>
                         
 

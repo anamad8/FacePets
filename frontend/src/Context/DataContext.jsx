@@ -11,12 +11,9 @@ export const DataProvider = ({children}) => {
 
 
     const [user,setUser] = useState()
-    const [userLogin,setUserLogin] = useState()
     const [darkMode, setDarkMode] = useState(false)
     const [datas, setData] = useState({});
 
-    console.log("userLogin",userLogin)
-    console.log("user",user)
 
     useEffect(() => {
         const userLoggedJSON = window.localStorage.getItem('user');
@@ -88,7 +85,7 @@ export const DataProvider = ({children}) => {
 
 
     return(
-        <DataContext.Provider value={{user, datas, login, logout, darkMode, setDarkMode, handlePosition, setUser,userLogin,setUserLogin}}>
+        <DataContext.Provider value={{user, datas, login, logout, darkMode, setDarkMode, handlePosition, setUser}}>
             {children}
         </DataContext.Provider>
     )
