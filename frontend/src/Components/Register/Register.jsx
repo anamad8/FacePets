@@ -140,7 +140,7 @@ function Register() {
                     res.json()
                     .then((data) => {
                         console.log(data);
-                        history('/login');
+                        history('/');
                     })
                 }
                 )
@@ -212,7 +212,7 @@ function Register() {
                             <button>Crea tu cuenta</button>
 
                             <div className='btn-login'>
-                                <Link to='/login'>Iniciar Sesión</Link>
+                                <Link to='/'>Iniciar Sesión</Link>
                             </div>
                         </form>
 

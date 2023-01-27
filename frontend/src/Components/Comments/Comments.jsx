@@ -39,7 +39,7 @@ function Comments() {
                 <span>{comment.name}</span>
                 <p>{comment.desc}</p>
             </div>
-            <span className="date">Hace 10 minutos</span>
+            <span className="date">Hace un momento</span>
             </div>
         ))}
     </div>

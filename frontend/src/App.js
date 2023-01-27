@@ -1,6 +1,5 @@
-import React, {useContext, useEffect} from "react";
+import React from "react";
 import { Routes, Route } from "react-router-dom";
-import { DataContext } from "./Context/DataContext";
 import { ProtectedRoute }from "./Components/ProtectedRoute/ProtectedRoute";
 import SideBar from "./Components/sideBar/sidebar";
 import HeaderLogin from "./Components/Header/HeaderLogin";
@@ -20,18 +19,7 @@ import ResetPassword from "./Components/NewPassword/ResetPassword";
 
 function App() {
 
-  const { user, login, logout, setUser, setDarkMode, darkMode } = useContext(DataContext)
 
-  useEffect(() => {
-    const userLogged = JSON.parse(localStorage.getItem('user'));
-    if(!userLogged){
-      setUser(null);
-    } else{
-      setUser(userLogged);
-    }
-  }, [])
-
-  console.log(user)
   return (
     <>
       <header>
@@ -39,7 +27,7 @@ function App() {
       </header>
       <SideBar />
       <Routes>
-        <Route element={<ProtectedRoute user={user}/>}>
+        <Route element={<ProtectedRoute/>}>
 
           <Route path="/" element={<Home/>}/>
           <Route path="/profile" element={<Profile/>} />

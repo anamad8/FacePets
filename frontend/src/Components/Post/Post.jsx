@@ -3,7 +3,6 @@ import './Post.css'
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
 import FavoriteOutlinedIcon from "@mui/icons-material/FavoriteOutlined";
 import TextsmsOutlinedIcon from "@mui/icons-material/TextsmsOutlined";
-import ShareOutlinedIcon from "@mui/icons-material/ShareOutlined"
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
 import { Link } from 'react-router-dom';
 import Comments from '../Comments/Comments';
@@ -11,8 +10,6 @@ import Comments from '../Comments/Comments';
 function Post({post}) {
 
       const [commentOpen, setCommentOpen] = useState(false)
-
-
 
 
 //Funcion temporal para hacer la conexion al back
@@ -31,7 +28,7 @@ function Post({post}) {
         <Link to={`/profile${post.userId}`} style={{textDecoration:"none", color: "inherit"}}>
             <span className="name">{post.name}</span>
         </Link>
-        <span className="date">Hace 1 minuto</span>
+        <span className="date">Hace un momento</span>
         </div>
         </div>
     <MoreHorizIcon/>
@@ -49,10 +46,7 @@ function Post({post}) {
         <TextsmsOutlinedIcon/>
         2 comentarios
         </div>
-        <div className="item">
-        <ShareOutlinedIcon/>
-         Compartidos
-        </div>
+        
       </div>
       {commentOpen && <Comments/>}
     </div>

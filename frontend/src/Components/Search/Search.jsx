@@ -21,6 +21,7 @@ function Search() {
    
     }, [])
 
+
   return (
     <div className="caja">
         <div className="cards"> 
