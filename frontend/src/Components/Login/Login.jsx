@@ -106,10 +106,13 @@ function Login() {
                             {errors.password ?<p>{errors.password}</p> : ""}
 
                             <button>Iniciar Sesión</button>
-
+                            <div className='btn-login'>
+                                <Link to='/newPassword'>Rec.Contraseña</Link>
+                            </div>
                             <div className='btn-login'>
                                 <Link to='/register'>Crea tu cuenta</Link>
                             </div>
+                            
                         </form>
 
                     </div>

@@ -12,6 +12,8 @@ import Login from "./Components/Login/Login"
 import Register from "./Components/Register/Register";
 import AboutUs from "./Components/AboutUs/AboutUs";
 import './CSS/style.css';
+import NewPassword from "./Components/NewPassword/ForgetPassword";
+import ResetPassword from "./Components/NewPassword/ResetPassword";
 
 
 
@@ -27,13 +29,12 @@ function App() {
       <Routes>
         <Route element={<ProtectedRoute/>}>
 
-          <Route path="/home" element={<Home/>}/>
+          <Route path="/" element={<Home/>}/>
           <Route path="/profile" element={<Profile/>} />
           <Route path="/AboutUs" element={<AboutUs/>} />
           <Route path="/editprofile" element={<EditProfile/>} /> 
           <Route path="/Search/:filter" element={<Search />} />
           <Route path="/profile/:id" element={<ProfileSpecific/>} />
-          
         </Route>
 
           <Route exact path="/"  element={<Login/>}/>

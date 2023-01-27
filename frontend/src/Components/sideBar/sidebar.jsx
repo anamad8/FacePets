@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 
 import {BiHomeAlt , BiShapePolygon} from "react-icons/bi";
+import {ImProfile, ImUsers} from "react-icons/im";
+
+
 import { Link } from "react-router-dom";
 import { useDataContext } from "../../Context/DataContext";
 import './sideBar.css';
@@ -63,7 +66,7 @@ export function SideBar(){
                         </Link>
                 <Link to="/profile">
                         <a href="#">
-                             <BiHomeAlt className="icon" />
+                             <ImProfile className="icon" />
                             <div className="title">
                                 <span>Perfil</span>
                                 </div>
@@ -71,7 +74,7 @@ export function SideBar(){
                         </Link>
                         <Link to="/AboutUs">
                         <a href="#">
-                             <BiHomeAlt className="icon" />
+                             <ImUsers className="icon" />
                             <div className="title">
                                 <span>¿Quienes Somos?</span>
                                 </div>
