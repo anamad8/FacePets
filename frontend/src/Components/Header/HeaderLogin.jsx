@@ -92,3 +92,5 @@ function HeaderLogin() {
 }
 
 export default HeaderLogin
+
+//Comentario para commit. Quitamos el error del front que no permitia la accesibilidad
