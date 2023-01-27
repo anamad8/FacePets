@@ -66,14 +66,8 @@ function HeaderLogin() {
                         <div className='darMode'>
                             <DarkMode/>
                         </div>
-                        <div className='icon' >            
-                            <Link to="/profile"><BiUserCircle/></Link>
-                            <FaEnvelope />
-                            <CiBellOn />
-                        </div>
                         <div className='headerUser'>
                             <img src={datas.image} />
-                            <p>{datas.petName} </p>
                         </div>
                         <CiLogin className='CiLogin' onClick={logOutRedirect}/>
                         
