@@ -35,7 +35,7 @@ function HeaderLogin() {
     function logOutRedirect() {
         setUser(null)
         localStorage.clear();
-        history("/login");
+        history("/");
     }
 
     return (
