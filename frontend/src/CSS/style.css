@@ -6,12 +6,12 @@
 }
 body{
     min-height: 100vh;
-    background: -webkit-linear-gradient(#09789960, #0a0011);
+    background: -webkit-linear-gradient(#0444588c, #555f96);
 }
 
 .active{
     background-color: #02363ffb;
-
+    background: -webkit-linear-gradient(#097799be, #0a0011);
     height: 100%;
 }
 
