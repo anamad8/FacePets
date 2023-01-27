@@ -13,8 +13,6 @@ function Post({post}) {
       const [commentOpen, setCommentOpen] = useState(false)
 
 
-
-
 //Funcion temporal para hacer la conexion al back
 
   const liked = false;
@@ -31,7 +29,7 @@ function Post({post}) {
         <Link to={`/profile${post.userId}`} style={{textDecoration:"none", color: "inherit"}}>
             <span className="name">{post.name}</span>
         </Link>
-        <span className="date">Hace 1 minuto</span>
+        <span className="date">Hace un momento</span>
         </div>
         </div>
     <MoreHorizIcon/>
