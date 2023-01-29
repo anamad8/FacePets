@@ -1,32 +1,20 @@
-import React, {useState} from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { useDataContext } from "../../Context/DataContext";
+import "react-toastify/dist/ReactToastify.css";
+import "../Login/Login.css";
+import MovingBanner from "../MovingBanner/MovingBanner";
 
-import {useNavigate} from "react-router-dom";
-import { useDataContext } from '../../Context/DataContext';
-
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-import "../Login/Login.css"
-import MovingBanner from '../MovingBanner/MovingBanner';
 
 const NewPassword = () => {
   const { login } = useDataContext();
-  const notify = (error) =>
-    toast(error, {
-      position: "bottom-right",
-      autoClose: 5000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "light",
-    });
+  const navigate = useNavigate();
+  
   const [inputs, setInputs] = useState({
     email: "",
     password: "",
   });
-const [idEmail, setIdEmail] = useState(null);
+  const [idEmail, setIdEmail] = useState(null);
   const [errors, setErrors] = useState({});
 
   const handleChange = (e) => {
@@ -44,51 +32,44 @@ const [idEmail, setIdEmail] = useState(null);
     return errors;
   }
 
-  const handleSubmit = async(e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+
     const err = validate(inputs);
     setErrors(err);
     if (Object.keys(err).length === 0) {
-      await fetch("http://localhost:3030/user/email/" + inputs.email, {})
+      await fetch("http://localhost:3030/user/email/" + inputs.email)
         .then((res) => {
-          res.json().then(data => {
-            if (data.message) {
-              notify(data.message);
-            }
-            console.log(data);
-            setIdEmail(data.data[0].email)
-            console.log(idEmail)
-          });
-        })
-        .catch((err) => {
-          console.log(err);
-        });
-        if(idEmail){
-            await fetch("http://localhost:3030/email/" +idEmail, {
-                method:'POST'
+          res.json().then((data) => {
+            console.log(data.data[0].email);
+            fetch("http://localhost:3030/email/" + data.data[0].email, {
+              method: "POST",
             })
-        .then((res) => {
-          res.json().then(data => {
-            if (data.message) {
-              notify(data.message);
-            }
-            console.log(data);
+              .then((res) => {
+                res.json().then((data) => {});
+              })
+              .catch((err) => {
+                console.log(err);
+              });
           });
         })
         .catch((err) => {
           console.log(err);
         });
-        }
+        navigate('/newPassword/successForgotPassword')
     }
   };
   return (
     <>
       <div className="login">
-        <div className="login-from" style={{
-          height: 'max-content',
-          padding: '10px',
-          margin: '10px'
-        }}>
+        <div
+          className="login-from"
+          style={{
+            height: "max-content",
+            padding: "10px",
+            margin: "10px",
+          }}
+        >
           <form action="" onSubmit={(e) => handleSubmit(e)}>
             <div>
               <label htmlFor="">Correo Electronico</label>
@@ -98,15 +79,15 @@ const [idEmail, setIdEmail] = useState(null);
                 name="email"
                 onChange={(e) => handleChange(e)}
               ></input>
-               {errors.email ?<p>{errors.email}</p> : ""}
+              {errors.email ? <p>{errors.email}</p> : ""}
             </div>
             <button type="submit">Enviar</button>
           </form>
         </div>
-        <MovingBanner/>
-        <ToastContainer/>
+        <MovingBanner />
+        
       </div>
     </>
   );
 };
- export default NewPassword
+export default NewPassword;

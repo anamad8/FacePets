@@ -62,9 +62,12 @@
   overflow: hidden;
   padding: var(--padding);
   margin: 0 auto;
+  display: flex;
+  justify-content: center;
 }
 #sidemenu #profile #photo img {
   border-radius: 50%;
+  width: auto;
 }
 #sidemenu #menuItems {
   overflow: hidden;
@@ -143,4 +146,6 @@
 }
 .menuCollapsed #item {
   width: 100px;
-}/*# sourceMappingURL=sideBar.css.map */
+}
+
+/*# sourceMappingURL=sideBar.css.map */

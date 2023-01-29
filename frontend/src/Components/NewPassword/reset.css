@@ -1,0 +1,32 @@
+.SuccessPasswordContainer{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.SuccessPassword{
+    font-family: 'Roboto', sans-serif;
+    background-color: transparent;
+    padding: 40px;
+    color: black;
+    box-shadow: 1px 1px 6px;
+    margin: 10px;
+    border-radius: 5px;
+}
+.SuccessPassword button{
+    background-color: #0071A2;
+    color: #fff;
+    border-radius: 16px;
+    margin-top: 10px;
+    padding: 10px 80px;
+    cursor: pointer;
+    transition: 1s;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+}

@@ -2,24 +2,15 @@ import React, { useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { useDataContext } from "../../Context/DataContext";
-import { ToastContainer, toast } from "react-toastify";
+
 import "react-toastify/dist/ReactToastify.css";
 import "../Login/Login.css";
 import MovingBanner from "../MovingBanner/MovingBanner";
 
 const ResetPassword = () => {
   const { email } = useParams();
-  const notify = (error) =>
-    toast(error, {
-      position: "bottom-right",
-      autoClose: 5000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "light",
-    });
+const navigate= useNavigate()
+ 
   const [inputs, setInputs] = useState({
     password: "",
     password1: "",
@@ -71,9 +62,10 @@ const ResetPassword = () => {
           res.json();
         })
         .then(data => {
+  
           console.log(Password)
           console.log(data);
-          console.log(1);
+          navigate('/newPassword/successResetPassword')
         })
         .catch((err) => {
           console.log(err);
@@ -113,7 +105,7 @@ const ResetPassword = () => {
           </form>
         </div>
         <MovingBanner />
-        <ToastContainer />
+       
       </div>
     </>
   );

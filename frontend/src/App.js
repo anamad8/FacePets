@@ -14,6 +14,7 @@ import AboutUs from "./Components/AboutUs/AboutUs";
 import './CSS/style.css';
 import NewPassword from "./Components/NewPassword/ForgetPassword";
 import ResetPassword from "./Components/NewPassword/ResetPassword";
+import { SuccessForgotPassword, SuccessResetPassword } from "./Components/NewPassword/SuccesChangePassword";
 
 
 
@@ -37,6 +38,9 @@ function App() {
           <Route path="/profile/:id" element={<ProfileSpecific/>} />
         </Route>
         <Route path="/newPassword/:email" element={<ResetPassword/>} />
+        <Route path="/newPassword/successForgotPassword" element={<SuccessForgotPassword/>} />
+        <Route path="/newPassword/successResetPassword" element={<SuccessResetPassword/>}/>
+
         <Route  exact path="/newPassword" element={<NewPassword/>} />
           <Route exact path="/login"  element={<Login/>}/>
           <Route exact path="/register" element={<Register/>} />
