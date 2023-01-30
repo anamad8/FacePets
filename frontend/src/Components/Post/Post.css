@@ -1,19 +1,31 @@
 .post {
   background-color: rgba(2, 197, 165, 0.61);
 }
+
 .post .container {
   margin-right: 10px;
   padding: 40px;
 }
+
 .post .container .user {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
+
 .post .container .user .userInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: 20px;
 }
+
 .post .container .user .userInfo img {
   width: 40px;
   height: 40px;
@@ -21,19 +33,29 @@
   -o-object-fit: cover;
      object-fit: cover;
 }
+
 .post .container .user .userInfo .details {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
+
 .post .container .user .userInfo .details .name {
   font-weight: 500;
 }
+
 .post .container .user .userInfo .details .date {
   font-size: 12px;
 }
+
 .post .container .content {
   margin: 10px 0px;
 }
+
 .post .container .content img {
   width: 100%;
   height: 400px;
@@ -41,15 +63,26 @@
      object-fit: cover;
   margin: 20px;
 }
+
 .post .container .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 20px;
 }
+
 .post .container .info .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 10px;
   cursor: pointer;
   font-size: 14px;
-}/*# sourceMappingURL=Post.css.map */
+}
+/*# sourceMappingURL=Post.css.map */

@@ -1,1 +1,9 @@
-{"version":3,"sources":["Posts.scss","Posts.css"],"names":[],"mappings":"AACA;EACI,aAAA;EACA,eAAA;EACA,iBAAA;EACA,kBAAA;EACA,sBAAA;EACA,SAAA;ACAJ","file":"Posts.css"}
+{
+    "version": 3,
+    "mappings": "AACA,AAAA,MAAM,CAAA;EAEF,OAAO,EAAE,IAAI;EACb,UAAU,EAAE,GAAG;EACf,WAAW,EAAE,IAAI;EACjB,YAAY,EAAE,IAAI;EAClB,cAAc,EAAE,MAAM;EACtB,GAAG,EAAE,IAAI;CACZ",
+    "sources": [
+        "Posts.scss"
+    ],
+    "names": [],
+    "file": "Posts.css"
+}
