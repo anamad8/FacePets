@@ -1,10 +1,27 @@
 const db = require('../models')
 const Post = db.post
 const Comment = db.comment
+const LikePost = db.likesPost
+const LikeComment = db.likesComment
 
 
 const getPosts = (req, res) => {
-  Post.findAll().then((posts) => {
+  Post.findAll({
+    include:[{
+      model: Comment,
+      as: "comment",
+      include:[
+        {
+          model: LikeComment,
+          as: "likesComment"
+        }
+      ]
+    },
+    {
+      model: LikePost,
+      as: "likesPost"
+    },]
+  }).then((posts) => {
     res.json(posts);
   });
 };
