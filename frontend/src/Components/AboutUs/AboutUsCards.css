@@ -5,7 +5,6 @@
 }
 
 .aboutus p {
-  margin-top: 5px;
   margin-bottom: 0px;
   text-align: center;
   font-size: 25px;
@@ -30,8 +29,7 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  backface-visibility: hidden;
   border-radius: 10px;
   overflow: hidden;
   transition: 0.5s;
@@ -44,8 +42,7 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .card .front h3 {
   position: absolute;
@@ -96,4 +93,6 @@
 }
 .card:hover .back {
   transform: perspective(600px) rotateY(360deg);
-}/*# sourceMappingURL=AboutUsCards.css.map */
+}
+
+/*# sourceMappingURL=AboutUsCards.css.map */
