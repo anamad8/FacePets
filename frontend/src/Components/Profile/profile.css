@@ -6,6 +6,8 @@
   border-radius: 10px;
   width: 60%;
   background-color: #03b5bb transparent;
+  height: -webkit-max-content;
+  height: -moz-max-content;
   height: max-content;
   padding: 20px;
   box-shadow: 1px 1px 5px rgb(138, 137, 137);
@@ -55,6 +57,4 @@
 .flexContainer .containerProfile .profileDesc {
   font-size: 1.2rem;
   border-bottom: solid;
-}
-
-/*# sourceMappingURL=profile.css.map */
+}/*# sourceMappingURL=profile.css.map */
