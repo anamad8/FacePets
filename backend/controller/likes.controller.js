@@ -1,6 +1,6 @@
 const db = require("../models");
-const LikePost = db.likePost;
-const LikeComment = db.likeComment;
+const LikePost = db.likesPost
+const LikeComment = db.likesComment
 
 const createLikePost = async (req, res) => {
   const id = req.params.id;
@@ -38,7 +38,7 @@ const createLikeComment = async (req, res) => {
     const id2 = req.params.id2;
     const modelData = {
       user_id: id,
-      post_id: id2,
+      comment_id: id2,
       status: true,
     };
     const response = await LikeComment.create(modelData)

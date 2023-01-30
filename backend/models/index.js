@@ -63,15 +63,15 @@ db.post.hasMany(db.likesPost, {
 });
 db.likesPost.belongsTo(db.post, {
   foreignKey: "post_id",
-  as: "post",
+  as: "likespost",
 });
 db.comment.hasMany(db.likesComment, {
   foreignKey: "comment_id",
-  as: "commentPost",
+  as: "likesComment",
 });
 db.likesComment.belongsTo(db.comment, {
   foreignKey: "comment_id",
-  as: "comment",
+  as: "likesComment",
 });
 
 

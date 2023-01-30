@@ -7,8 +7,8 @@
     justify-content: center;
     color: black;
     height: auto;
-    width: 100vw;
-    margin: 100px;
+    /* width: 100vw; */
+    margin: 35px;
   }
   .caja .cardsUnique {
     display: flex;
@@ -21,12 +21,14 @@
   }
   .caja .cards {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     flex-wrap: wrap;
     justify-content: center;
     width: 60%;
     background-color: #26948ea8;
     opacity: 0.9;
-    margin-top: 10px;
+    margin-top: 30px;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
     border-radius: 10px;
     -webkit-border-radius: 10px;
@@ -34,8 +36,11 @@
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
 }
-  .caja .cards .card {
-    flex: 0 0 200px;
+  .caja .cards .card-user {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    max-width: 70%;
     margin: 10px;
     border: 1px solid #ccc;
     border-radius: 10px;
@@ -46,29 +51,44 @@
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
 }
-  .caja .cards .card .imageProduct {
-    max-width: 100%;
+  .caja .cards .card-user .imageProduct {
+    width: 150px;
+    height: 130px;
     -webkit-transition: 0.4s ease;
     transition: 0.4s ease;
   }
-  .caja .cards .card .imageProduct:hover {
+  .caja .cards .card-user .imageProduct:hover {
     -webkit-transform: scale(1.03);
     transform: scale(1.03);
   }
-  .caja .cards .card .text {
+  .caja .cards .card-user .text {
     padding: 0 20px 20px;
   }
 
-  .caja .cards .card .imageProduct {
-    max-width: 100%;
-    -webkit-transition: 0.4s ease;
-    transition: 0.4s ease;
-  }
-  .caja .cards .card .imageProduct:hover {
-    -webkit-transform: scale(1.03);
-    transform: scale(1.03);
-  }
   .ProductInfo .imageProduct {
     width: 20vw;
     height: 20vw;
   }
+
+
+  .caja .cards .card-user .seguir{
+    margin-right: 10px;
+  }
+
+  .caja .cards .card-user .seguir button{
+    padding: 10px;
+    background-color: rgb(10, 72, 97);
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.caja .cards .card-user .seguir button:hover{
+  background-color:#fff;
+  color:  rgb(10, 72, 97);
+}

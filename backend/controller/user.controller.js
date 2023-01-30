@@ -1,10 +1,15 @@
 const db = require('../models')
 const Post = db.post
 const User = db.user
+const Comment = db.comment
+const LikePost = db.likesPost
+const LikeComment = db.likesComment
+
 
 const jwt = require("jsonwebtoken");
 const bcryptjs = require("bcryptjs");
 const bcrypt= require('bcrypt')
+const { likesComment } = require('../models')
 require("dotenv").config();
 
 const generateAccessToken = (user) => {
@@ -237,7 +242,24 @@ const getUserPost = async (req, res) => {
       {
         model: Post,
         as: "post",
+        include:[
+          {
+          model: Comment,
+          as: "comment",
+          include:[
+            {
+              model: LikeComment,
+              as: "likesComment"
+            }
+          ]
+        },
+        {
+          model: LikePost,
+          as: "likesPost"
+        }
+      ]
       },
+     
     ],
     where: { id: id},
   });
