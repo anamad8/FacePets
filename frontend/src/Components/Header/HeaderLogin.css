@@ -2,11 +2,15 @@
     background-color: #03B915;
     box-shadow: 1px 1px 7px black;
     height:100px;
-    position: relative;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
     
 }
 
@@ -132,8 +136,7 @@
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         justify-items: end;
-        /* background-color: #3fcda9; */
-        background-color: rgba(3, 80, 67, 0.884);
+        background-color:  #03B915;
         border-radius: 10% 0 0 100% ;
         -webkit-border-radius: 10% 0 0 100% ;
         -moz-border-radius: 10% 0 0 100% ;
