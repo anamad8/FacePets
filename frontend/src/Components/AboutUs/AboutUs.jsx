@@ -60,7 +60,7 @@ Soy una persona dinámica, proactiva, con facilidad de adaptación a los diverso
         </div>
         <div className="face back">
           <h3>Nahuel Kubin</h3>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores repellendus necessitatibus recusandae in? Suscipit explicabo sequi accusantium nemo repudiandae, dicta voluptatum totam iste commodi ad quasi, incidunt rerum ex laudantium.</p>         
+          <p>Hola! me llamo Nahuel Kubin, pero me dicen Kubo. Tengo 20 años y actualmente me encuentro cursando un BootCamp de Dev-Place y estudiando Ingenieria en Informatica. Me gusta todo lo que tenga que ver con la tecnologia y los avances tecnologicos. </p>         
             <a href="https://www.linkedin.com/in/rodolfo-nahuel-kubin-346b69253/"target='_blank'><div className="link">Acceder mi LinkedIN</div></a>          
         </div>
       </div>
