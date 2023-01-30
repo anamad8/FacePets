@@ -7,35 +7,33 @@ import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
 import { Link } from 'react-router-dom';
 import Comments from '../Comments/Comments';
 
-function Post({post}) {
+const Post = (props) => {
 
-      const [commentOpen, setCommentOpen] = useState(false)
+  const [commentOpen, setCommentOpen] = useState(false)
 
+  
 
 //Funcion temporal para hacer la conexion al back
 
   const liked = false;
-
-
   
   return (
-    <div className='post'>
+    <div className='post' key={props.index}>
       <div className="container">  
       <div className="user">
         <div className="userInfo">
-        <img src={post.profilePicture} alt="" />
+        <Link to={`/profile/${props.element.user.id}`}><img src={props.element.user.image} alt="" /></Link>
         <div className="details">
-        <Link to={`/profile${post.userId}`} style={{textDecoration:"none", color: "inherit"}}>
-            <span className="name">{post.name}</span>
+        <Link to={`/profile/${props.element.user.id}`} style={{textDecoration:"none", color: "inherit"}}>
+            <span className="name">{props.element.user.petName}</span>
         </Link>
-        <span className="date">Hace un momento</span>
         </div>
         </div>
     <MoreHorizIcon/>
       </div>
       <div className="content">
-        <p>{post.desc}</p>
-        <img className='postImg' src={post.img} alt= "" />
+        <p>{props.element.description}</p>
+        <img className='postImg' src={props.element.image} alt= "" />
       </div>
       <div className="info">
         <div className="item">
@@ -44,11 +42,21 @@ function Post({post}) {
         </div>
         <div className="item" onClick={() => setCommentOpen(!commentOpen)}>
         <TextsmsOutlinedIcon/>
-        2 comentarios
         </div>
         
+        <div className="write">
+        
+        <input type="text" placeholder="Escribe un comentario" />
+        <button>Enviar</button>
+        
+        </div>
+
       </div>
-      {commentOpen && <Comments/>}
+      {props.element.comment.length > 0 ? 
+        commentOpen && <Comments element={props.element} key={props.index}/>
+        : <></>
+      }
+      
     </div>
     </div>
   )

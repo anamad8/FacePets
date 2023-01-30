@@ -1,5 +1,6 @@
 const db = require('../models')
 const Post = db.post
+const User= db.user
 const Comment = db.comment
 const LikePost = db.likesPost
 const LikeComment = db.likesComment
@@ -8,9 +9,16 @@ const LikeComment = db.likesComment
 const getPosts = (req, res) => {
   Post.findAll({
     include:[{
+      model: User,
+      as:"user"
+    },{
       model: Comment,
       as: "comment",
       include:[
+        {
+          model: User,
+          as:"user"
+        },
         {
           model: LikeComment,
           as: "likesComment"

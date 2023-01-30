@@ -8,25 +8,21 @@ import { useParams } from 'react-router-dom';
 function ProfileSpecific()  {
 
     let {id} = useParams();
-    const [user, setUser] = useState([])
+    const [user, setUser] = useState(null)
 
 
     useEffect(() => {
-        fetch("http://localhost:3030/user/" + id)
+        fetch("http://localhost:3030/user/userPost/" + id)
           .then((res) => res.json())
-          .then((data) => data.data)
-          .then((resp) => {
-            setUser(resp);
-          });
+          .then((data) => setUser(data));
       }, []);
 
   return (
     <>
-          {user.map((e, key) => {
-            return (
-              <ProfileFormatterEach element={e} key={key} />
-            );
-          })}
+      {user ? 
+      <ProfileFormatterEach element={user} /> : <></>
+    }
+                    
     </>
   )
 }

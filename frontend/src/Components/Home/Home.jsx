@@ -6,7 +6,7 @@ function Home() {
         <>
         <div style={{ display: "flex"}}>
         <div style={{flex: 6 }}>
-        <Posts></Posts>
+        <Posts />
         </div>
         </div>
         </>

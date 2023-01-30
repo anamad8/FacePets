@@ -1,10 +1,10 @@
 import React from "react"
 import { BsGenderFemale, BsGenderMale } from "react-icons/bs"
+import Post from '../Post/Post';
 import './profile.css'
 
 
 const ProfileFormatterEach = (props) =>{
-
 
 let styles={
     backgroundImage: "url(" + props.element.imageBanner + ")",
@@ -31,6 +31,15 @@ return(
             <p>{props.element.description}</p>
         </div>
     </div>
+    </div>
+    <div className="" key={props.index}>
+        {props.element.post.map((e, key) => {
+            return(
+                <>
+                    <p>{e.description}</p>
+                </>
+            )
+        })}
     </div>
     </>
 )
