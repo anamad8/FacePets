@@ -76,7 +76,7 @@ function Login() {
             window.localStorage.setItem('token', data.tokenAccess);
             let logged = data.user.id;
             login(logged);
-            history("/home");
+            history("/");
             })
             }})
           .catch((err) => {

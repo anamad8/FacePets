@@ -35,7 +35,7 @@ function HeaderLogin() {
     function logOutRedirect() {
         setUser(null)
         localStorage.clear();
-        history("/");
+        history("/login");
     }
 
     return (
@@ -45,7 +45,7 @@ function HeaderLogin() {
 
                 <div className='headerLogin'>
                     <div className='img-logo'>
-                    <Link to="/home"><img src={imgLogo} alt="" className='img-logo' /></Link>
+                    <Link to="/"><img src={imgLogo} alt="" className='img-logo' /></Link>
                     </div>
 
                     <Form className="SearchBar">
@@ -87,5 +87,3 @@ function HeaderLogin() {
 }
 
 export default HeaderLogin
-
-//Comentario para commit. Quitamos el error del front que no permitia la accesibilidad
