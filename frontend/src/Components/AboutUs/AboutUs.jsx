@@ -8,7 +8,7 @@ import './AboutUsCards.css';
 function AboutUs() {
   return (
     <> <div className='aboutus'><h1>¿Quienes somos?</h1>
-      <p>¡Aca te contamos!</p>
+      <p>¡Acá te contamos!</p>
     </div>
      <div className="contenedor">
       <div className="card">
@@ -33,7 +33,8 @@ function AboutUs() {
         </div>
         <div className="face back">
           <h3>Anabel Amad</h3>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores repellendus necessitatibus recusandae in? Suscipit explicabo sequi accusantium nemo repudiandae, dicta voluptatum totam iste commodi ad quasi, incidunt rerum ex laudantium.</p>
+          <p>Soy Full Stack Developer Jr, graduada en Teclab Instituto Técnico Superior. Donde desarrolle habilidades de gestionar, liderar trabajos en equipo, manejar nuevas herramientas digitales, mejorar procesos y la calidad del trabajo a través de la planificación.
+Soy una persona dinámica, proactiva, con facilidad de adaptación a los diversos grupos de trabajos y necesidades de la empresa.</p>
           <a href="https://www.linkedin.com/in/anabel-amad-" target='_blank'>
           <div className="link">
             Acceder mi LinkedIN
@@ -48,7 +49,7 @@ function AboutUs() {
         </div>
         <div className="face back">
           <h3>Marcelo Albano</h3>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores repellendus necessitatibus recusandae in? Suscipit explicabo sequi accusantium nemo repudiandae, dicta voluptatum totam iste commodi ad quasi, incidunt rerum ex laudantium.</p>         
+          <p>Hola, soy Marcelo Albano! Actualmente me encuentro cursando el Bootcamp de DEV-PLACE para ser un desarrollador FULLSTACK en JS. Anteriormente me recibí de Técnico en Programación en la EESTN°2. Además de la programación, me encantan los videojuegos, la música (tanto hacerla como escucharla), y leer. </p>         
             <a href="https://www.linkedin.com/in/marcelo-diego-albano-6a453022b" target='_blank'><div className="link">Acceder mi LinkedIN</div></a>
         </div>
       </div>

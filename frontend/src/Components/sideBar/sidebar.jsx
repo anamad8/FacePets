@@ -56,7 +56,7 @@ export function SideBar(){
                 <div id="menuItems">
                     
                <div className="item">
-               <Link to="/Home">
+               <Link to="/">
                         <a href="#">
                              <BiHomeAlt className="icon" />
                             <div className="title">
@@ -91,4 +91,3 @@ export function SideBar(){
 }
 
 export default SideBar;
-
