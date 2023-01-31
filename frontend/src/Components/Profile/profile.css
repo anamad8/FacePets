@@ -1,9 +1,16 @@
+html{
+  max-width: 100%;
+}
+body{
+  width: 100%;
+}
 .flexContainer {
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
           min-width: 400px;
+          
 }
 .flexContainer .containerProfile {
   border-radius: 10px;
@@ -14,8 +21,9 @@
   height: -moz-max-content;
   height: max-content;
   padding: 20px;
-  box-shadow: 1px 1px 5px rgb(138, 137, 137);
-  font-family: "Times New Roman", Times, serif;
+  -webkit-box-shadow: 1px 1px 10px #000000;
+          box-shadow: 1px 1px 10px #000000;
+  font-family: 'Times New Roman', Times, serif;
   color: white;
 }
 .flexContainer .containerProfile .profileImg {
