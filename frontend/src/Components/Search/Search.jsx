@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import UserFormatter from './UserFormatter';
+import './Search.css';
 
 
 function Search() {
