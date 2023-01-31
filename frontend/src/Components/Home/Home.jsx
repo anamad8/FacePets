@@ -1,16 +1,22 @@
 import React from 'react'
+import './Home.css'
+import MakeAPost from '../MakeAPost/MakeAPost';
 import Posts from '../Posts/Posts'
-function Home() {
+
+const Home = (props) => {
+
+
+
   return (
     <div>
-        <>
-        <div style={{ display: "flex"}}>
+        
+      <div style={{ display: "flex"}}>
         <div style={{flex: 6 }}>
-        <Posts />
+          <MakeAPost />
+          <Posts />
         </div>
-        </div>
-        </>
-      
+      </div>
+        
     </div>
   )
 }

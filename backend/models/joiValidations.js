@@ -39,7 +39,7 @@ const validateUser = (req,res,next) =>{
 }
 const validatePost = (req,res,next) =>{
     const schema = Joi.object({
-        title: Joi.string().min(5).max(100).required()
+        title: Joi.string().min(5).max(100)
         .messages({
             'string.empty': "Ingresa el titulo del Post",
             'string.min': "El titulo del post debe ser mayor a 5 caracteres",

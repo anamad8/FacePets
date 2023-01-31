@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import MakeAPost from "../MakeAPost/MakeAPost";
 import { BsPencil, BsGenderFemale, BsGenderMale } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import { useDataContext } from "../../Context/DataContext";
@@ -60,6 +61,7 @@ const Profile = () => {
           </div>
         </div>
       </div>
+      <MakeAPost />
 
 {user ?
 <>

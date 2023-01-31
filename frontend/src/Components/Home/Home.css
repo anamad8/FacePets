@@ -1,4 +1,12 @@
 * {
   padding: 0;
   margin: 0;
-}/*# sourceMappingURL=Home.css.map */
+}
+
+.writePost {
+  display: flex;
+  justify-content: center;
+  transform: translateY(100%);
+}
+
+/*# sourceMappingURL=Home.css.map */
