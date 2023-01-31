@@ -28,9 +28,6 @@ fetch(`http://localhost:3030/like/post/${datas.id}/${props.element.id}`,{
   console.log(err)
 })      
 }
-
-//Funcion temporal para hacer la conexion al back
-
   
   return (
     <div className='post' key={props.key}>
