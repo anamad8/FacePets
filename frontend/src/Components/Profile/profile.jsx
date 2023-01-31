@@ -23,6 +23,8 @@ const Profile = () => {
   }, []);
   return (
     <>
+    <div style={{ display: "flex"}}>
+        <div style={{flex: 6 }}>
       <div className="flexContainer">
         <div className="containerProfile">
           <div className="profileImg" style={styles}>
@@ -58,7 +60,11 @@ const Profile = () => {
           </div>
         </div>
       </div>
-{user ?<div className="posts" id="postsProfile" key={datas.id}>
+
+{user ?
+<>
+
+<div className="posts" id="postsProfile" key={datas.id}>
         {user.post.map((e, key) => {
           return (
             <>
@@ -73,8 +79,8 @@ const Profile = () => {
             </>
           );
         })}
-      </div> : <></>}
-      
+      </div></>: <></>}
+      </div></div>  
     </>
   );
 };

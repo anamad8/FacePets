@@ -12,6 +12,7 @@ const Post = (props) => {
 
   const [commentOpen, setCommentOpen] = useState(false)
 const {datas} = useDataContext();
+ 
 const likePost =() =>{
 fetch(`http://localhost:3030/like/post/${datas.id}/${props.element.id}`,{
   method:'POST'
@@ -20,7 +21,6 @@ fetch(`http://localhost:3030/like/post/${datas.id}/${props.element.id}`,{
   .then(data => {
     console.log(data)
     window.location.reload(false);
-    
   })
   })
 .catch((err) => {
@@ -30,6 +30,7 @@ fetch(`http://localhost:3030/like/post/${datas.id}/${props.element.id}`,{
 
 //Funcion temporal para hacer la conexion al back
 
+  const liked = false;
   
   return (
     <div className='post' key={props.key}>
@@ -47,7 +48,8 @@ fetch(`http://localhost:3030/like/post/${datas.id}/${props.element.id}`,{
       </div>
       <div className="content">
         <p>{props.description}</p>
-        <img className='postImg' src={props.image} alt= "" />
+        {props.image != null ?  <img className='postImg' src={props.image} alt= "" /> : <></>}
+       
       </div>
       <div className="info">
         <div className="item">
