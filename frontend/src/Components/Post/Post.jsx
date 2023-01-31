@@ -7,7 +7,10 @@ import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
 import { Link } from 'react-router-dom';
 import Comments from '../Comments/Comments';
 import { useDataContext } from '../../Context/DataContext';
-
+import Button from 'react-bootstrap/Button';
+import ButtonGroup from 'react-bootstrap/ButtonGroup';
+import Dropdown from 'react-bootstrap/Dropdown';
+import 'bootstrap/dist/css/bootstrap.min.css';
 const Post = (props) => {
 
   const [commentOpen, setCommentOpen] = useState(false)
@@ -28,6 +31,23 @@ fetch(`http://localhost:3030/like/post/${datas.id}/${props.element.id}`,{
 })      
 }
 
+
+const eliminarPost=()=>{
+  fetch(`http://localhost:3030/post/${props.element.id}`,{
+  method:'DELETE'
+}).then((res) => {
+  res.json()          
+  .then(data => {
+    console.log(data)
+    window.location.reload(false);
+  })
+  })
+.catch((err) => {
+  console.log(err)
+})   
+}
+
+
 //Funcion temporal para hacer la conexion al back
 
   const liked = false;
@@ -44,7 +64,13 @@ fetch(`http://localhost:3030/like/post/${datas.id}/${props.element.id}`,{
         </Link>
         </div>
         </div>
-    <MoreHorizIcon/>
+        {/* {props.user.id === datas.id ?<Dropdown as={ButtonGroup}>
+      <Dropdown.Toggle split variant="success" id="dropdown-split-basic" style={{zIndex:0}}/>
+        <Dropdown.Menu style={{zIndex:0}}>
+        <Dropdown.Item onClick={eliminarPost}>Eliminar</Dropdown.Item>
+        </Dropdown.Menu>
+    </Dropdown> : <></> } */}
+        
       </div>
       <div className="content">
         <p>{props.description}</p>
@@ -69,7 +95,7 @@ fetch(`http://localhost:3030/like/post/${datas.id}/${props.element.id}`,{
 
       </div>
       {props.comment.length > 0 ? 
-        commentOpen && <Comments comment={props.element.comment} key={props.key}/>
+        commentOpen && <Comments user={props.user}comment={props.element.comment} key={props.key}/>
         : <></>
       }
       

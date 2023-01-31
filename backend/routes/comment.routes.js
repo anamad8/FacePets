@@ -8,6 +8,6 @@ router.get("/", getComment);
 router.post("/:id1/:id2", [uploadMulter.single("image"), validateComment], createComment);
 router.patch("/:id", [uploadMulter.single("image")], editComment);
 router.get("/:id", getCommentByid);
-router.delete("/", deleteComment);
+router.delete("/:id", deleteComment);
 
 module.exports = router;
