@@ -92,3 +92,24 @@
   background-color:#fff;
   color:  rgb(10, 72, 97);
 }
+
+@media (max-width: 845px){
+  .caja .cards {
+    width: 80%;
+  }
+}
+
+
+@media (max-width: 645px){
+  .caja .cards {
+    width: 90%;
+  }
+}
+
+@media (max-width: 592px){
+
+  .caja .cards .card-user {
+    flex-direction: column;
+    
+  }
+}

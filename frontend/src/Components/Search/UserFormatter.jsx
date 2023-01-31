@@ -7,10 +7,10 @@ const UserFormatter = (props) => {
 
   const [btnSeguir, setBtnSeguir] = useState(true);
 
-  const handleClick = () =>{
+  const handleClick = (e) =>{
     setBtnSeguir(!btnSeguir)
     console.log(btnSeguir)
-    let btn =  document.querySelector(".btn-seguir")
+    let btn =  e.target
     if (btnSeguir === true) {
       btn.innerText ='Dejar de seguir'
     }else{
@@ -28,9 +28,9 @@ const UserFormatter = (props) => {
             <p>Edad:{props.element.petAge}</p>
             <p>Raza: {props.element.breed}</p>
         </div>
-        {/* <div className='seguir'>
-          <button className='btn-seguir' onClick={handleClick}>Seguir</button>
-        </div> */}
+        <div className='seguir'>
+          <button className='btn-seguir' onClick={(e)=>{handleClick(e)}}>Seguir</button>
+        </div>
     </div>
   )
 }
