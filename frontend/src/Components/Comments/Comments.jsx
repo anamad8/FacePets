@@ -6,8 +6,6 @@ const  Comments = (props) => {
     
     //Comentarios temporales, armado de front para luego conexion con el back
 
-
-
   return (
     <div className="comments" key={props.index}>
 
