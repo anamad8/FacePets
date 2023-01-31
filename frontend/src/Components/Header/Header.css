@@ -2,11 +2,12 @@
     background-color: #045c0fd0;
     box-shadow: 1px 1px 7px black;
     height:100px;
-    position: relative;
+    width: 100%;
+    position: fixed;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
+    transform: translateY(-100px);
 }
 
 .header .img-logo{

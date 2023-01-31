@@ -11,8 +11,51 @@ import { useDataContext } from '../../Context/DataContext';
 const Post = (props) => {
 
   const [commentOpen, setCommentOpen] = useState(false)
-const {datas} = useDataContext();
+
+  const {datas} = useDataContext();
+
+const [data, setData] = useState({
+  description:'',
+  image:''
+})
  
+const handleChange = (e) => {
+
+  if(e.target.name === 'image'){
+    setData({
+      ...data,
+      [e.target.name]: e.target.files,
+    })
+
+  }else{
+      setData({
+      ...data,
+      [e.target.name]: e.target.value
+    })
+  }
+
+}
+
+const handleSubmit = (e) => {
+  e.preventDefault();
+
+  const formData = new FormData();
+
+  formData.append("description", data.description);
+  formData.append("image", data.image[0]);
+
+  fetch(`http://localhost:3030/comment/${datas.id}/${props.element.id}`,{
+    method:'POST',
+    body: formData,
+  }).then((res) => {
+    res.json()
+    window.location.reload(false);
+    }
+  ).then(data => console.log(data))
+  .catch((err) => console.log(err))
+  
+}
+
 const likePost =() =>{
 fetch(`http://localhost:3030/like/post/${datas.id}/${props.element.id}`,{
   method:'POST'
@@ -27,8 +70,6 @@ fetch(`http://localhost:3030/like/post/${datas.id}/${props.element.id}`,{
   console.log(err)
 })      
 }
-
-//Funcion temporal para hacer la conexion al back
 
   const liked = false;
   
@@ -60,11 +101,13 @@ fetch(`http://localhost:3030/like/post/${datas.id}/${props.element.id}`,{
         <TextsmsOutlinedIcon/>
         </div>
         
-        <div className="write">
+        <div className="write" >
+          <form onSubmit={handleSubmit}>
         
-        <input type="text" placeholder="Escribe un comentario" />
-        <button>Enviar</button>
-        
+        <input type="text" name="description" onChange={handleChange} placeholder="Escribe un comentario"/>
+        <button type="submit">Enviar</button>
+
+          </form>
         </div>
 
       </div>
