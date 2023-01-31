@@ -9,10 +9,10 @@ const  Comments = (props) => {
 
 
   return (
-    <div className="comments" key={props.index}>
+    <div className="comments" key={props.key}>
 
 
-        {props.element.comment.map((e, key) =>{
+        {props.comment.map((e, key) =>{
         return( 
             <div className="comment">
                 <Link to={`/profile/${e.user.id}`}><img src={e.user.image} alt="" /></Link>

@@ -2,7 +2,7 @@ import React from "react"
 import { BsGenderFemale, BsGenderMale } from "react-icons/bs"
 import Post from '../Post/Post';
 import './profile.css'
-
+import '../Posts/Posts.css'
 
 const ProfileFormatterEach = (props) =>{
 
@@ -32,11 +32,12 @@ return(
         </div>
     </div>
     </div>
-    <div className="" key={props.index}>
+    <div className="posts" key={props.index}>
         {props.element.post.map((e, key) => {
+            console.log(props)
             return(
                 <>
-                    <p>{e.description}</p>
+                    <Post element={e} key={key} user={props.element} comment={e.comment} description={e.description} image={e.image}/>
                 </>
             )
         })}
