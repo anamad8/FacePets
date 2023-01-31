@@ -5,4 +5,15 @@
   margin-right: 20vh;
   flex-direction: column;
   gap: 50px;
-}/*# sourceMappingURL=Posts.css.map */
+}
+
+#postsProfile {
+  min-width: 500px;
+  align-items: center;
+}
+#postsProfile .post {
+  width: 70%;
+  min-width: 500px;
+}
+
+/*# sourceMappingURL=Posts.css.map */

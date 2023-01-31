@@ -246,7 +246,10 @@ const getUserPost = async (req, res) => {
           {
           model: Comment,
           as: "comment",
-          include:[
+          include:[{
+            model: User,
+            as:"user"
+          },
             {
               model: LikeComment,
               as: "likesComment"

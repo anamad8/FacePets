@@ -1,10 +1,14 @@
 .flexContainer {
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+          min-width: 400px;
 }
 .flexContainer .containerProfile {
   border-radius: 10px;
   width: 60%;
+  min-width: 400px;
   background-color: #03b5bb transparent;
   height: -webkit-max-content;
   height: -moz-max-content;
