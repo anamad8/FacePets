@@ -65,6 +65,7 @@ Soy una persona dinámica, proactiva, con facilidad de adaptación a los diverso
         </div>
       </div>
     </div>
+
 </>
   )
 }
