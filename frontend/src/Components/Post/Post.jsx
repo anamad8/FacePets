@@ -12,6 +12,7 @@ const Post = (props) => {
 
   const [commentOpen, setCommentOpen] = useState(false)
 const {datas} = useDataContext();
+  const liked = false;
 const likePost =() =>{
 fetch(`http://localhost:3030/like/post/${datas.id}/${props.element.id}`,{
   method:'POST'
