@@ -96,18 +96,18 @@ const EditProfile = () => {
         <div className="modal">
           <form onSubmit={handleSubmit}>
             <div className="editImagen">
-              <label>Imagen de Perfil</label>
+              <p>Imagen de Perfil</p>
               <img src={datas.image} />
               <input type="File" name="image" onChange={handleChange} />
             </div>
 
             <div>
               <div className="input">
-                <label>Banner</label>
+                <p>Banner</p>
                 <input type="File" name="banner" onChange={handleChange} />
               </div>
               <div className="input">
-                <label>Nombre del dueño</label>
+                <p>Nombre del dueño</p>
                 <input
                   type="text"
                   placeholder={datas.name}
@@ -116,7 +116,7 @@ const EditProfile = () => {
                 />
               </div>
               <div className="input">
-                <label>Nombre de la mascota</label>
+                <p>Nombre de la mascota</p>
                 <input
                   type="text"
                   placeholder={datas.petName}
@@ -125,7 +125,7 @@ const EditProfile = () => {
                 />
               </div>
               <div className="input">
-                <label>Edad</label>
+                <p>Edad</p>
                 <input
                   type="number"
                   placeholder={datas.petAge}
@@ -134,7 +134,7 @@ const EditProfile = () => {
                 />
               </div>
               <div className="input">
-                <label>Gender</label>
+                <p>Gender</p>
                 <select
                   value={stateSelect}
                   name="gender"
@@ -147,7 +147,7 @@ const EditProfile = () => {
               </div>
 
               <div className="input">
-                <label>Raza</label>
+                <p>Raza</p>
                 <input
                   type="text"
                   placeholder={datas.breed}
@@ -156,7 +156,7 @@ const EditProfile = () => {
                 />
               </div>
               <div className="input" id="textarea">
-                <label for="description">Descripcion</label>
+                <p>Descripcion</p>
                 <textarea
                   name="description"
                   rows="5"

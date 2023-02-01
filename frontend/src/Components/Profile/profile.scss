@@ -2,6 +2,7 @@
 .flexContainer{
     display: flex;
     justify-content: center;
+    margin-top: 80px;
 
 .containerProfile{
     border-radius: 10px;
@@ -28,6 +29,7 @@
             float: right;
             font-size: 20px;
             text-decoration: none;
+            color:#fff;
             &:hover{
                 transition: all  0.3s;
             font-size: 25px;
