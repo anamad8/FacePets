@@ -14,6 +14,6 @@ router.get("/", getPosts);
 router.post("/:id", [uploadMulter.single("image"),validatePost], createPost);
 router.patch("/:id", [uploadMulter.single("image")], editPost);
 router.get("/:id", getPostByid);
-router.delete("/", deletePost);
+router.delete("/:id", deletePost);
 
 module.exports = router;
