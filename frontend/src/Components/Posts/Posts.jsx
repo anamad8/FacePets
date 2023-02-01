@@ -12,7 +12,6 @@ useEffect(() => {
         .then(res => res.json())
         .then(data => {
           setarrayPosts(data)
-          console.log(data)
         })
 
 }, [])
@@ -20,7 +19,6 @@ useEffect(() => {
 return (
   <div className="posts">
      {arrayPosts.map((e, key) => {
-      console.log(e)
       return (
         <Post element={e} key={key} user={e.user} comment={e.comment} description={e.description} image={e.image}/>
       )

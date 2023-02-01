@@ -7,6 +7,10 @@ import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
 import { Link } from 'react-router-dom';
 import Comments from '../Comments/Comments';
 import { useDataContext } from '../../Context/DataContext';
+import { AiOutlineCloseCircle } from "react-icons/ai";
+import ButtonGroup from 'react-bootstrap/ButtonGroup';
+import Dropdown from 'react-bootstrap/Dropdown';
+
 
 const Post = (props) => {
 
@@ -70,6 +74,20 @@ fetch(`http://localhost:3030/like/post/${datas.id}/${props.element.id}`,{
   console.log(err)
 })      
 }
+const eliminarPost=()=>{
+  fetch(`http://localhost:3030/post/${props.element.id}`,{
+  method:'DELETE'
+}).then((res) => {
+  res.json()          
+  .then(data => {
+    console.log(data)
+    window.location.reload(false);
+  })
+  })
+.catch((err) => {
+  console.log(err)
+})   
+}
 
   const liked = false;
   
@@ -85,7 +103,7 @@ fetch(`http://localhost:3030/like/post/${datas.id}/${props.element.id}`,{
         </Link>
         </div>
         </div>
-    <MoreHorizIcon/>
+   {props.user.id === datas.id ?<AiOutlineCloseCircle onClick={eliminarPost} id="icon" />:<></>} 
       </div>
       <div className="content">
         <p>{props.description}</p>
@@ -99,6 +117,8 @@ fetch(`http://localhost:3030/like/post/${datas.id}/${props.element.id}`,{
         </div>
         <div className="item" onClick={() => setCommentOpen(!commentOpen)}>
         <TextsmsOutlinedIcon/>
+        {props.element.comment.length}
+
         </div>
         
         <div className="write" >

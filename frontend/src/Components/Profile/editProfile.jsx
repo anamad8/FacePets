@@ -85,8 +85,9 @@ const EditProfile = () => {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
-        window.location.reload(false);
         navigate('/profile');
+        window.location.reload(false);
+        
       })
       .catch((err) => console.log(err));
   };
