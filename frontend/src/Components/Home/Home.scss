@@ -16,8 +16,9 @@
 .writePost form{
     grid-column: 2 / 3;
     grid-row: 1;
-    padding: 10px 30px;
+    padding: 30px 30px 25px;
     background-color: rgba(2, 197, 165, 0.61);
+    border-radius: 10px;
 }
 
 .writePost .input-post{
