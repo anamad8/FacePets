@@ -8,7 +8,8 @@ h1{
     font-size: 50px;
     display: flex;
     justify-content: space-around;
-    
+    margin-top: 7vh;
+    padding: 5vh;
     font-family: 'Roboto', sans-serif;
     font-weight: 900;
     

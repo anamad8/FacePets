@@ -1,28 +1,18 @@
 .writePost {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-transform: translateY(100%);
-          transform: translateY(100%);
+  justify-content: center;
+  transform: translateY(100%);
   margin: 30px 0px;
   margin-top: -60px;
 }
 
 .writePost .writePost-form {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .writePost form {
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 1;
-  grid-column: 2 / 3;
-  -ms-grid-row: 1;
+  grid-column: 2/3;
   grid-row: 1;
   padding: 10px 30px;
   background-color: rgba(2, 197, 165, 0.61);
@@ -39,10 +29,9 @@
   -o-border-radius: 5px;
 }
 
-.writePost input[type="file" i] {
+.writePost input[type=file i] {
   padding: 5px 75px;
-  -webkit-box-shadow: 0px 2px 3px 0px;
-          box-shadow: 0px 2px 3px 0px;
+  box-shadow: 0px 2px 3px 0px;
   margin-bottom: 10px;
   border: none;
   border-radius: 5px;
@@ -76,17 +65,12 @@
     margin: 0px;
   }
   .writePost .writePost-form {
-    display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (1fr)[3];
-        grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
   .writePost form {
     margin-top: -20px;
-    -ms-grid-column: 2;
-    -ms-grid-column-span: 1;
-    grid-column: 2 / 3;
-    -ms-grid-row: 1;
+    grid-column: 2/3;
     grid-row: 1;
     padding: 10px 30px;
     background-color: rgba(2, 197, 165, 0.61);
@@ -97,7 +81,7 @@
   .writePost .input-post {
     padding: 5px 80px;
   }
-  .writePost input[type="file" i] {
+  .writePost input[type=file i] {
     margin: 0px;
     margin-top: 5px 30px;
     margin-bottom: 10px;
@@ -107,13 +91,11 @@
     padding: 6px 55px;
   }
 }
-
 @media (max-width: 844px) {
   .writePost form {
     padding: 10px 8px;
   }
-  .writePost input[type="file" i] {
+  .writePost input[type=file i] {
     padding: 5px 28px;
   }
-}
-/*# sourceMappingURL=Home.css.map */
+}/*# sourceMappingURL=Home.css.map */

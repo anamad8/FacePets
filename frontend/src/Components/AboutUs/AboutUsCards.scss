@@ -26,7 +26,7 @@
 .card{
     position: relative;
     width: 300px;
-    height: 350px;
+    height: 410px;
     margin: 5px;
     
     .face{
@@ -70,12 +70,12 @@
         box-shadow: 0 80px 100px rgba(110, 110, 110, 0.719);
         .link{
             margin: 3px;
-            border-radius: 10px;
+            border-radius: 5px;
             border-top: solid 1px #f3f3f3;
             height: 50px;
             line-height: 50px;
-            background: -webkit-linear-gradient(#031a1bc4, #000000);
-            border-color: #000000;
+            background: rgb(12, 12, 12);
+            border-color: #5f5e5e;
             &:hover{
                 transform: scale(1.10);
             }

@@ -91,7 +91,7 @@ function Login() {
     return (
 
         <>
-            <h1>Bienvenido!!!</h1>
+            <h1>¡Bienvenido!</h1>
                 <div className='login'>
                     <div className='login-from'>
                         <form  action="" onSubmit= {(e) => handleSubmit(e)}>
