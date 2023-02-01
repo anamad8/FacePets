@@ -262,9 +262,12 @@ const getUserPost = async (req, res) => {
         }
       ]
       },
-     
+    ],
+    order: [
+      [{model: Post, as:'post'}, 'id', 'DESC']
     ],
     where: { id: id},
+
   });
 
   res.status(200).send(data);
