@@ -107,18 +107,17 @@ const eliminarPost=()=>{
         </Link>
         </div>
         </div>
-        {/* {props.user.id === datas.id ?<Dropdown as={ButtonGroup}>
+        { props.user.id === datas.id ?<Dropdown as={ButtonGroup}>
       <Dropdown.Toggle split variant="success" id="dropdown-split-basic" style={{zIndex:0}}/>
         <Dropdown.Menu style={{zIndex:0}}>
         <Dropdown.Item onClick={eliminarPost}>Eliminar</Dropdown.Item>
         </Dropdown.Menu>
-    </Dropdown> : <></> } */}
+    </Dropdown> : <></>  }
         
       </div>
       <div className="content">
         <p>{props.description}</p>
         {props.image != null ?  <img className='postImg' src={props.image} alt= "" /> : <></>}
-       
       </div>
       <div className="info">
         <div className="item">
@@ -127,6 +126,7 @@ const eliminarPost=()=>{
         </div>
         <div className="item" onClick={() => setCommentOpen(!commentOpen)}>
         <TextsmsOutlinedIcon/>
+        {props.element.comment.length}
         </div>
         
         <div className="write" >

@@ -44,7 +44,7 @@ const Comments = (props) => {
               </Link>
               <p>{e.description}</p>
             </div>
-            {e.user.id === datas.id ? (
+            {/* {e.user.id === datas.id ? (
               <Dropdown as={ButtonGroup}>
                 <Dropdown.Toggle
                   split
@@ -60,7 +60,7 @@ const Comments = (props) => {
               </Dropdown>
             ) : (
               <></>
-            )}
+            )} */}
             <span className="date">{e.createdAt}</span>
           </div>
         );
