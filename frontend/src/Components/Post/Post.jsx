@@ -99,6 +99,7 @@ fetch(`http://localhost:3030/like/post/${datas.id}/${props.element.id}`,{
         </div>
         <div className="item" onClick={() => setCommentOpen(!commentOpen)}>
         <TextsmsOutlinedIcon/>
+        {props.element.comment.length}
         </div>
         
         <div className="write" >
