@@ -104,8 +104,8 @@ fetch(`http://localhost:3030/like/post/${datas.id}/${props.element.id}`,{
         <div className="write" >
           <form onSubmit={handleSubmit}>
         
-        <input type="text" name="description" onChange={handleChange} placeholder="Escribe un comentario"/>
-        <button type="submit">Enviar</button>
+            <input type="text" name="description" onChange={handleChange} placeholder="Escribe un comentario"/>
+            <button type="submit">Enviar</button>
 
           </form>
         </div>

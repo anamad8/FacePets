@@ -51,14 +51,17 @@ function MakeAPost() {
   return (
     <>
           <div className="writePost">
-            <form onSubmit={handleSubmitPost}>
-        
-              <input type="text" name="description" onChange={handleChangePost} placeholder="Escribe un comentario"/>
-              <input type="file" name="image" onChange={handleChangePost} />
+            <div className="writePost-form">
+              <form onSubmit={handleSubmitPost}>
+              
+                <input type="text" name="description" className='input-post' onChange={handleChangePost} placeholder="Escribe un comentario"/>
+                <input type="file" name="image" onChange={handleChangePost} />
 
-              <button type="submit">Enviar</button>
+                <button type="submit">Enviar</button>
 
-            </form>
+              </form>
+            </div>
+            
           </div>
     </>
   )
