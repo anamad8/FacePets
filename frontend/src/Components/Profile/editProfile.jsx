@@ -6,7 +6,7 @@ import './editProfile.css'
 
 
 const EditProfile = () => {
-  const { datas, user } = useDataContext();
+  const { datas} = useDataContext();
   const navigate = useNavigate(0);
   const [state, setState] = useState({
     name: "",
@@ -67,7 +67,7 @@ const EditProfile = () => {
       formData.append("image", state.image[0]);
     }
    
-    fetch("http://localhost:3030/user/banner/" + user.id, {
+    fetch("http://localhost:3030/user/banner/" + datas.id, {
       method: "PATCH",
       body: formdataBanner,
     })
@@ -78,7 +78,7 @@ const EditProfile = () => {
       })
       .catch((err) => console.log(err));
 
-    fetch("http://localhost:3030/user/" + user.id, {
+    fetch("http://localhost:3030/user/" + datas.id, {
       method: "PATCH",
       body: formData,
     })
