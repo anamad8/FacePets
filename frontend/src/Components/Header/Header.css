@@ -4,14 +4,20 @@
     height:100px;
     width: 100%;
     position: fixed;
+    top: 15vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    transform: translateY(-100px);
+    transform: translateY(-100%);
+    
+    
+    
 }
 
 .header .img-logo{
-
+    
     width:120px;
     height:100px;
 } 
+
+

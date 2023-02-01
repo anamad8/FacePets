@@ -13,17 +13,13 @@
     z-index: 1;
     
 }
-
 .headerLogin .img-logo{
     width:120px;
     height:100px;
 }
-
 .headerLogin .input{
     display: flex;
-
 }
-
 .headerLogin .search{
     position:absolute;
     margin-left: 20px;
