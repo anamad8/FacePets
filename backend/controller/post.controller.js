@@ -46,8 +46,8 @@ const getPostByid = async(req, res) => {
             model: Comment,
             as: "comment",
           },
-        ],
-        where: { id: id},
+        ],  
+        where: { id: id}
       });
       res.status(200).send(data);
 };
