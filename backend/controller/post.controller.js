@@ -10,7 +10,7 @@ const getPosts = (req, res) => {
   Post.findAll({
     include:[{
       model: User,
-      as:"user"
+      as:"user",
     },{
       model: Comment,
       as: "comment",
@@ -28,11 +28,16 @@ const getPosts = (req, res) => {
     {
       model: LikePost,
       as: "likesPost"
-    },]
+    },
+  ],
+  order: [
+    ['id', 'DESC']
+  ],
   }).then((posts) => {
     res.json(posts);
   });
 };
+
 const getPostByid = async(req, res) => {
     const id = req.params.id
     const data = await Post.findOne({
