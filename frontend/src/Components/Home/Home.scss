@@ -8,8 +8,13 @@
 }
 
 .writePost .writePost-form{
-
+    grid-column: 2 / 3;
+    grid-row: 1;
+    padding: 10px 40px ;
+    background-color: rgba(2, 197, 165, 0.61);
+    
 }
+
 
 .writePost input{
     padding: 5px 30px;
