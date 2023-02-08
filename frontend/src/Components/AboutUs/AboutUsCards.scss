@@ -58,6 +58,7 @@
             color: rgba(255, 255, 255, 0.795);
             background-color: rgba(0, 0, 0, 0.719);
             text-align: center;
+            
         }
     }
     .back{
@@ -92,6 +93,8 @@
         }
         p{
             letter-spacing: 1px;
+            font-family: 'Roboto', sans-serif;
+            font-size: 15px;
         }
     }
     &:hover{
@@ -105,3 +108,9 @@
 
 }
 
+a{
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    text-decoration: none;
+}
