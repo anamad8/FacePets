@@ -2,8 +2,7 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .comments .write {
   display: flex;
@@ -32,6 +31,13 @@
   justify-content: space-between;
   gap: 20px;
 }
+.comments .comment .item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  font-size: 14px;
+}
 .comments .comment .info {
   flex: 5;
   display: flex;
@@ -50,4 +56,6 @@
   align-self: center;
   color: rgb(43, 42, 42);
   font-size: 15px;
-}/*# sourceMappingURL=Comments.css.map */
+}
+
+/*# sourceMappingURL=Comments.css.map */

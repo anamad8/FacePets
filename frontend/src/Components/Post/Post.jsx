@@ -60,7 +60,7 @@ const handleSubmit = (e) => {
   
 }
 
-const likePost =() =>{
+const likePost = () =>{
 fetch(`http://localhost:3030/like/post/${datas.id}/${props.element.id}`,{
   method:'POST'
 }).then((res) => {
@@ -89,6 +89,8 @@ const eliminarPost=()=>{
 })   
 }
 
+
+
   const liked = false;
   
   return (
@@ -112,13 +114,12 @@ const eliminarPost=()=>{
       </div>
       <div className="info">
         <div className="item">
-        {liked ? <FavoriteOutlinedIcon/> : <FavoriteBorderOutlinedIcon onClick={likePost}/>}
-        {props.element.likesPost.length}
+          {liked ? <FavoriteOutlinedIcon/> : <FavoriteBorderOutlinedIcon onClick={likePost}/>}
+          {props.element.likesPost.length}
         </div>
         <div className="item" onClick={() => setCommentOpen(!commentOpen)}>
-        <TextsmsOutlinedIcon/>
-        {props.element.comment.length}
-
+          <TextsmsOutlinedIcon/>
+          {props.element.comment.length}
         </div>
         
         <div className="write" >

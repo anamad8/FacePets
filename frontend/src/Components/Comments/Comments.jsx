@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
+import FavoriteOutlinedIcon from "@mui/icons-material/FavoriteOutlined";
 import { useDataContext } from '../../Context/DataContext';
 import './Comments.css';
 
@@ -8,8 +9,9 @@ const  Comments = (props) => {
 
     const {datas} = useDataContext();
 
-    const likeComment = () => {
-        fetch(`http://localhost:3030/comment/${datas.id}/${props.element.id}`,{
+    const likeComment = (idComment) => {
+        console.log(idComment)
+        fetch(`http://localhost:3030/like/comment/${datas.id}/${idComment}`,{
         method:'POST'
         }).then((res) => {
             res.json()          
@@ -26,7 +28,6 @@ const  Comments = (props) => {
 
   return (
     <div className="comments" key={props.key}>
-
         {props.comment.map((e, key) =>{
         return( 
             <div className="comment">
@@ -36,9 +37,12 @@ const  Comments = (props) => {
             <p>{e.description}</p>
                     
             </div>
-                <FavoriteBorderOutlinedIcon onClick={likeComment}/>
-                {/* {props.element.likescomments.length} */}
+                <div className="item">
+                {liked ? <FavoriteOutlinedIcon/> : <FavoriteBorderOutlinedIcon onClick={() => {likeComment(e.id)}}/>}
+                {e.likesComment.length} 
+                </div>
                 <span className="date">{e.createdAt}</span>
+                
             </div>
             )
         })}
