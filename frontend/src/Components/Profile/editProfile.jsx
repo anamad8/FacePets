@@ -135,7 +135,7 @@ const EditProfile = () => {
                 />
               </div>
               <div className="input">
-                <p>Gender</p>
+                <p>Genero</p>
                 <select
                   value={stateSelect}
                   name="gender"
