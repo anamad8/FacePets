@@ -11,11 +11,10 @@ import Home from "./Components/Home/Home";
 import Login from "./Components/Login/Login"
 import Register from "./Components/Register/Register";
 import AboutUs from "./Components/AboutUs/AboutUs";
-import './CSS/style.css';
 import NewPassword from "./Components/NewPassword/ForgetPassword";
 import ResetPassword from "./Components/NewPassword/ResetPassword";
 import { SuccessForgotPassword, SuccessResetPassword } from "./Components/NewPassword/SuccesChangePassword";
-
+import './CSS/style.css';
 
 
 function App() {

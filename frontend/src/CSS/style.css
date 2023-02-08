@@ -7,12 +7,12 @@
 body{
     min-height: 100vh;
     padding-top: 5%;
-    background: -webkit-linear-gradient(#0444588c, #555f96);
+    background: -webkit-linear-gradient(#78f2eebd, #1d2c8b);
 }
 
 .active{
     background-color: #02363ffb;
-    background: -webkit-linear-gradient(#097799be, #0a0011);
+    background: -webkit-linear-gradient(#006a8abe, #0a0011);
     height: 100%;
 }
 
@@ -35,4 +35,3 @@ body{
         display: none;
     }
 }
-

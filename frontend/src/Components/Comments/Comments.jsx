@@ -3,12 +3,9 @@ import { Link } from 'react-router-dom';
 import './Comments.css';
 
 const  Comments = (props) => {
-    
-    //Comentarios temporales, armado de front para luego conexion con el back
 
   return (
     <div className="comments" key={props.key}>
-
 
         {props.comment.map((e, key) =>{
         return( 

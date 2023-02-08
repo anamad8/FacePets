@@ -15,7 +15,7 @@
   grid-column: 2/3;
   grid-row: 1;
   padding: 30px 30px 25px;
-  background-color: rgba(2, 197, 165, 0.61);
+  background-color: rgb(51 221 193 / 61%);
   border-radius: 10px;
 }
 
@@ -58,7 +58,6 @@
 .writePost button:hover {
   background-color: #fff;
   color: #03B915;
-  border: none;
 }
 
 @media (max-width: 844px) {

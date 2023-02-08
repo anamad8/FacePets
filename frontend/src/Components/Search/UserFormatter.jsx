@@ -5,18 +5,18 @@ import "react-toastify/dist/ReactToastify.css";
 
 const UserFormatter = (props) => {
 
-  const [btnSeguir, setBtnSeguir] = useState(true);
+  // const [btnSeguir, setBtnSeguir] = useState(true);
 
-  const handleClick = (e) =>{
-    setBtnSeguir(!btnSeguir)
-    console.log(btnSeguir)
-    let btn =  e.target
-    if (btnSeguir === true) {
-      btn.innerText ='Dejar de seguir'
-    }else{
-      btn.innerText ='Seguir'
-    }
-  }
+  // const handleClick = (e) =>{
+  //   setBtnSeguir(!btnSeguir)
+  //   console.log(btnSeguir)
+  //   let btn =  e.target
+  //   if (btnSeguir === true) {
+  //     btn.innerText ='Dejar de seguir'
+  //   }else{
+  //     btn.innerText ='Seguir'
+  //   }
+  // }
 
 
   return (
@@ -28,9 +28,9 @@ const UserFormatter = (props) => {
             <p>Edad:{props.element.petAge}</p>
             <p>Raza: {props.element.breed}</p>
         </div>
-        <div className='seguir'>
+        {/* <div className='seguir'>
           <button className='btn-seguir' onClick={(e)=>{handleClick(e)}}>Seguir</button>
-        </div>
+        </div> */}
     </div>
   )
 }
