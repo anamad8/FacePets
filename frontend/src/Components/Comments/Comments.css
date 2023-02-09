@@ -31,6 +31,13 @@
   justify-content: space-between;
   gap: 20px;
 }
+.comments .comment #icon {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+.comments .comment #icon:hover {
+  cursor: pointer;
+}
 .comments .comment .item {
   display: flex;
   align-items: center;

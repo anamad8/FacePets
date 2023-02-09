@@ -133,7 +133,7 @@ const eliminarPost=()=>{
 
       </div>
       {props.comment.length > 0 ? 
-        commentOpen && <Comments comment={props.element.comment} key={props.key}/>
+        commentOpen && <Comments comment={props.element.comment} key={props.key} user={props.user}/>
         : <></>
       }
       
