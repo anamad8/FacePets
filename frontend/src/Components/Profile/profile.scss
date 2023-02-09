@@ -1,0 +1,63 @@
+
+.flexContainer{
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+
+.containerProfile{
+    border-radius: 10px;
+    width: 60%;
+    background-color: #03b5bb transparent;
+    height: max-content;
+    padding: 20px;
+    box-shadow: 1px 1px 10px rgb(0, 0, 0);
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    
+    
+    .profileImg{
+
+        border-radius: 10px;
+        padding: 5px;
+        border-bottom: solid;
+        height: 15rem;
+        text-align: center;
+        
+        background-size: cover;
+        a{text-decoration: none;}
+        .icon{
+            float: right;
+            font-size: 20px;
+            text-decoration: none;
+            color:#fff;
+            &:hover{
+                transition: all  0.3s;
+            font-size: 25px;
+            cursor: pointer;
+            }
+        }
+        img{
+            width: 250px;
+            border-radius: 50%;
+            height: 15rem;
+            box-shadow: 1px 1px 20px gray;
+            padding: 10px;
+        }
+    }
+    .profileData{
+        border-bottom: solid;
+        font-size: 1rem;
+        span{
+            margin-left: 5px;
+        }
+        .profileAge{
+            float: right;
+            font-size: 20px;
+            padding: 10px;
+        }
+    }
+    .profileDesc{
+        font-size: 1.2rem;
+        border-bottom: solid;
+    }
+}}

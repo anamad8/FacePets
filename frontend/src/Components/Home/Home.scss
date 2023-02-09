@@ -1,0 +1,126 @@
+
+.writePost{
+    display: flex;
+    justify-content: center;
+    transform: translateY(100%);
+    margin: 30px 0px;
+    margin-top: -60px;
+}
+
+.writePost  .writePost-form{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+}
+
+.writePost form{
+    grid-column: 2 / 3;
+    grid-row: 1;
+    padding: 30px 30px 25px;
+  background-color: rgb(51 221 193 / 61%);
+    border-radius: 10px;
+}
+
+.writePost .input-post{
+    padding: 8px 127px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+// .writePost input{
+//     padding: 5px 75px;
+//     margin-bottom: 10px;
+//     border: none;
+//     border-radius: 5px;
+//     -webkit-border-radius: 5px;
+//     -moz-border-radius: 5px;
+//     -ms-border-radius: 5px;
+//     -o-border-radius: 5px;
+// }
+
+.writePost input[type="file" i]{
+    padding: 5px 75px;
+    box-shadow: 0px 2px 3px 0px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.writePost button{
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    background-color: #03B915;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 6px 186px;
+}
+
+.writePost button:hover{
+    background-color: #fff;
+    color: #03B915;
+}
+
+@media (max-width: 844px){
+    .writePost {
+        margin:  0px;
+    }
+    
+    .writePost  .writePost-form{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+       
+
+    }
+    .writePost form{
+        margin-top: -20px;
+        grid-column: 2 / 3;
+        grid-row: 1;
+        padding: 10px 30px;
+        background-color: rgba(2, 197, 165, 0.61);
+    }
+
+    .writePost input{
+        margin-bottom: 5px;
+
+    }
+
+    .writePost .input-post{
+        padding: 5px 80px;
+    }
+
+    .writePost input[type="file" i]{
+        margin: 0px;
+        margin-top: 5px 30px;
+        margin-bottom: 10px;
+    }
+
+    .writePost button{
+        margin-left: 90px;
+        padding: 6px 55px;
+    }
+}
+
+@media (max-width: 844px){
+    .writePost form {
+        padding: 10px 8px;
+        
+    }
+
+    .writePost input[type="file" i] {
+       padding: 5px 28px;
+    }
+}
+

@@ -1,0 +1,91 @@
+#modalContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+#modalContainer .modal {
+  padding: 10px;
+  margin: 10px;
+  margin-top: 70px;
+  border-radius: 10px;
+  background-color: rgba(2, 197, 165, 0.61);
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  width: 500px;
+}
+#modalContainer .modal .button {
+  text-align: center;
+}
+#modalContainer .modal .button button {
+  border: none;
+  padding: 10px 40px;
+  border-radius: 10px;
+  font-size: 20px;
+  background-color: #03B915;
+  color: #fff;
+  cursor: pointer;
+}
+#modalContainer .modal .button button:hover {
+  background-color: #fff;
+  color: #03B915;
+}
+#modalContainer .modal .editImagen {
+  padding: 20px;
+  margin: 15px;
+  box-shadow: 1px 1px 10px rgb(196, 196, 196);
+  text-align: center;
+}
+#modalContainer .modal .editImagen label {
+  display: block;
+}
+#modalContainer .modal .editImagen img {
+  width: 250px;
+  border-radius: 50%;
+  height: 15rem;
+  box-shadow: 1px 1px 20px gray;
+  margin: 5px;
+}
+#modalContainer .modal #textarea {
+  text-align: center;
+}
+#modalContainer .modal #textarea label {
+  display: block;
+}
+#modalContainer .modal .input {
+  display: flex;
+  box-shadow: 1px 1px 10px rgb(228, 226, 226);
+  border-radius: 10px;
+  margin: 15px;
+  padding: 10px;
+}
+#modalContainer .modal .input label {
+  margin-right: 5px;
+}
+#modalContainer .modal .input input {
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+#modalContainer .modal .input textarea {
+  resize: none;
+  border-radius: 5px;
+}
+#modalContainer .modal .input p {
+  margin-right: 15px;
+}
+
+@media (max-width: 668px) {
+  #modalContainer .modal {
+    margin-top: 85px;
+  }
+  #modalContainer .modal {
+    width: 350px;
+  }
+  #modalContainer .modal .input input {
+    padding: 0px;
+  }
+}/*# sourceMappingURL=editProfile.css.map */

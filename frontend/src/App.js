@@ -1,24 +1,51 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import { ProtectedRoute }from "./Components/ProtectedRoute/ProtectedRoute";
+import SideBar from "./Components/sideBar/sidebar";
+import HeaderLogin from "./Components/Header/HeaderLogin";
+import Search from "./Components/Search/Search";
+import ProfileSpecific from "./Components/Profile/profileSpecific";
+import Profile from "./Components/Profile/profile";
+import EditProfile from "./Components/Profile/editProfile";
+import Home from "./Components/Home/Home";
+import Login from "./Components/Login/Login"
+import Register from "./Components/Register/Register";
+import AboutUs from "./Components/AboutUs/AboutUs";
+import NewPassword from "./Components/NewPassword/ForgetPassword";
+import ResetPassword from "./Components/NewPassword/ResetPassword";
+import { SuccessForgotPassword, SuccessResetPassword } from "./Components/NewPassword/SuccesChangePassword";
+import './CSS/style.css';
+
 
 function App() {
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <>
+      <header>
+        <HeaderLogin />
       </header>
-    </div>
+      <SideBar />
+      <Routes>
+        <Route element={<ProtectedRoute/>}>
+
+          <Route path="/" element={<Home/>}/>
+          <Route path="/profile" element={<Profile/>} />
+          <Route path="/AboutUs" element={<AboutUs/>} />
+          <Route path="/editprofile" element={<EditProfile/>} /> 
+          <Route path="/Search/:filter" element={<Search />} />
+          <Route path="/profile/:id" element={<ProfileSpecific/>} />
+        </Route>
+        <Route path="/newPassword/:email" element={<ResetPassword/>} />
+        <Route path="/newPassword/successForgotPassword" element={<SuccessForgotPassword/>} />
+        <Route path="/newPassword/successResetPassword" element={<SuccessResetPassword/>}/>
+
+        <Route  exact path="/newPassword" element={<NewPassword/>} />
+          <Route exact path="/login"  element={<Login/>}/>
+          <Route exact path="/register" element={<Register/>} />
+
+      </Routes>
+    </>
   );
 }
 

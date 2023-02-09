@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+.aboutus {
+    margin-top: 0px;
+    padding: 5vh;
+    p{
+        margin-bottom: 0px;
+        text-align: center;
+        font-size: 25px;
+        text-decoration: underline;
+    }
+}
+
+.contenedor{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
+    margin-left: 30px;
+}
+
+.card{
+    position: relative;
+    width: 310px;
+    height: 390px;
+    margin: 2px;
+    
+    
+    .face{
+        position: absolute;
+        width: 100%; 
+        height: 100%;
+        backface-visibility: hidden;
+        border-radius: 10px;
+        overflow: hidden;
+        transition: .5s ;
+    }
+    .front{
+        transform: perspective(600px) rotateY(0deg);
+        box-shadow: 0, 5px, 10px #000;
+        img{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        h3{
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 45px;
+            line-height: 45px;
+            color: rgba(255, 255, 255, 0.795);
+            background-color: rgba(0, 0, 0, 0.719);
+            text-align: center;
+            
+        }
+    }
+    .back{
+        transform: perspective(600px) rotateY(180deg);
+        background: rgba(210, 224, 4, 0.863);
+        padding: 15px;
+        color: #ffffff;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        text-align: center;
+        box-shadow: 0 80px 100px rgba(110, 110, 110, 0.719);
+        .link{
+            margin: 3px;
+            border-radius: 10px;
+            border-top: solid 1px #f3f3f3;
+            height: 40px;
+            line-height: 50px;
+            background: rgb(12, 12, 12);
+            border-color: #5f5e5e;
+            &:hover{
+                transform: scale(1.10);
+            }
+            a{
+                color: #f3f3f3;
+            }
+        }
+        h3{
+            font-size: 30px;
+            margin-top: 20px;
+            letter-spacing: 2px;
+        }
+        p{
+            letter-spacing: 1px;
+            font-family: 'Roboto', sans-serif;
+            font-size: 15px;
+        }
+    }
+    &:hover{
+        .front{
+            transform: perspective(600px) rotateY(180deg);
+        }
+        .back{
+            transform: perspective(600px) rotateY(360deg);
+        }
+    }
+
+}
+
+a{
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    text-decoration: none;
+}

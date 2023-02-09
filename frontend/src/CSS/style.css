@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    min-height: 100vh;
+    padding-top: 5%;
+    background: -webkit-linear-gradient(#78f2eebd, #1d2c8b);
+}
+
+.active{
+    background-color: #02363ffb;
+    background: -webkit-linear-gradient(#006a8abe, #0a0011);
+    height: 100%;
+}
+
+.active p{
+    color: #fff;
+}
+
+.active h1{
+    color: #fff;
+}
+
+.moving-img img{
+    animation: updown 3s linear infinite;
+    -webkit-animation: updown 3s linear infinite;
+}
+
+
+@media(max-width:937px){
+    .moving-img{
+        display: none;
+    }
+}

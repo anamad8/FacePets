@@ -1,0 +1,62 @@
+.flexContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+}
+.flexContainer .containerProfile {
+  border-radius: 10px;
+  width: 60%;
+  background-color: #03b5bb transparent;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  padding: 20px;
+  box-shadow: 1px 1px 10px rgb(0, 0, 0);
+  font-family: "Times New Roman", Times, serif;
+  color: white;
+}
+.flexContainer .containerProfile .profileImg {
+  border-radius: 10px;
+  padding: 5px;
+  border-bottom: solid;
+  height: 15rem;
+  text-align: center;
+  background-size: cover;
+}
+.flexContainer .containerProfile .profileImg a {
+  text-decoration: none;
+}
+.flexContainer .containerProfile .profileImg .icon {
+  float: right;
+  font-size: 20px;
+  text-decoration: none;
+  color: #fff;
+}
+.flexContainer .containerProfile .profileImg .icon:hover {
+  transition: all 0.3s;
+  font-size: 25px;
+  cursor: pointer;
+}
+.flexContainer .containerProfile .profileImg img {
+  width: 250px;
+  border-radius: 50%;
+  height: 15rem;
+  box-shadow: 1px 1px 20px gray;
+  padding: 10px;
+}
+.flexContainer .containerProfile .profileData {
+  border-bottom: solid;
+  font-size: 1rem;
+}
+.flexContainer .containerProfile .profileData span {
+  margin-left: 5px;
+}
+.flexContainer .containerProfile .profileData .profileAge {
+  float: right;
+  font-size: 20px;
+  padding: 10px;
+}
+.flexContainer .containerProfile .profileDesc {
+  font-size: 1.2rem;
+  border-bottom: solid;
+}/*# sourceMappingURL=profile.css.map */

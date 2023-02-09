@@ -1,0 +1,33 @@
+.header{
+    background-color: #045c0fd0;
+    box-shadow: 1px 1px 7px black;
+    height:100px;
+    width: 100%;
+    position: fixed;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transform: translateY(-165%);
+    z-index: 1;
+    
+    
+}
+
+.header .img-logo{
+    
+    width:120px;
+    height:100px;
+} 
+
+@media (max-width: 844px){
+    .header .img-logo{
+    
+        width:120px;
+        height:100px;
+    } 
+    
+
+}
+
+
