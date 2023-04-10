@@ -11,15 +11,12 @@ function Search() {
     const [arrayUsers, setarrayUsers] = useState([])
 
     useEffect(() => {
-
-      
       fetch('http://localhost:3030/user')
             .then(res => res.json())
             .then(data => data.data)
             .then((resp) => {
                 setarrayUsers(resp)
             })
-   
     }, [])
 
 
